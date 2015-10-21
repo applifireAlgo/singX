@@ -1,0 +1,39 @@
+Ext.define('Buzzor.singx.shared.singx.model.singx.CorridorModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "corridorId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "corridorName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "tocountryid",
+          "reference": "Country",
+          "defaultValue": ""
+     }, {
+          "name": "countryid",
+          "reference": "Country",
+          "defaultValue": ""
+     }, {
+          "name": "applySingXFee",
+          "type": "boolean",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

@@ -1,0 +1,7 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-19 11:02:42
+ development mode --enabled true 
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-19 11:03:01
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-19 11:03:01
+// script --file singx.cf
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-19 11:03:01

@@ -1,0 +1,460 @@
+
+
+
+
+ development mode --enabled true 
+
+
+
+buzzproperties codeStatus --PropertyFileName status --key SingxPrefix --value 1
+
+// Entity Creation 
+
+buzzorclass add --className ~.app.shared.singx.SingxPrefix --implements java.io.Serializable,com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface --implementsGenericType java.util.Comparator#singx.app.shared.singx.SingxPrefix --annotation javax.persistence.Table,javax.persistence.Entity --key type.org.eclipse.persistence.annotations.Cache,size.org.eclipse.persistence.annotations.Cache,expiry.org.eclipse.persistence.annotations.Cache,alwaysRefresh.org.eclipse.persistence.annotations.Cache,disableHits.org.eclipse.persistence.annotations.Cache,name.javax.persistence.Table,createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value org.eclipse.persistence.annotations.CacheType$CACHE#org.eclipse.persistence.annotations.CacheType,64000.org.eclipse.persistence.annotations.Cache,0.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,ast_SingxPrefix_M.javax.persistence.Table,john.doe.com.athena.annotation.SourceCodeAuthorClass,.com.athena.annotation.SourceCodeAuthorClass,1.com.athena.annotation.SourceCodeAuthorClass,SingxPrefix.com.athena.annotation.SourceCodeAuthorClass,com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity --value_type javaType,Integer,Integer,Boolean,Boolean,String,String,String,String,String,javaType
+
+Persistent add entity --entityName singx.app.shared.singx.SingxPrefix
+
+buzzorfield create --type ~.app.shared.singx.SingxPrefix --field_name prefixName --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value prefixName.com.fasterxml.jackson.annotation.JsonProperty,prefixName.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.SingxPrefix --field_name prefixName --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.SingxPrefix --field_name prefixName --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#50
+
+buzzorfield create --type ~.app.shared.singx.SingxPrefix --field_name primaryKey --dataType java.lang.String --Modifier private --annotation javax.persistence.Transient
+
+buzzorfield create --type ~.app.shared.singx.SingxPrefix --field_name prefixId --dataType java.lang.String --Modifier private --valueType String,String,String --annotation javax.persistence.Id,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty,javax.persistence.GeneratedValue --key value.com.fasterxml.jackson.annotation.JsonProperty,generator.javax.persistence.GeneratedValue,name.javax.persistence.Column --value prefixId.com.fasterxml.jackson.annotation.JsonProperty,UUIDGenerator.javax.persistence.GeneratedValue,prefixId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.SingxPrefix --field_name counrtyId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value counrtyId.com.fasterxml.jackson.annotation.JsonProperty,counrtyId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.SingxPrefix --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --annotation javax.persistence.Transient,com.fasterxml.jackson.annotation.JsonIgnore
+
+buzzorfield create --type ~.app.shared.singx.SingxPrefix --field_name versionId --dataType Integer --Modifier private --annotation javax.persistence.Version,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key name.javax.persistence.Column,value.com.fasterxml.jackson.annotation.JsonProperty --value versionId.javax.persistence.Column,versionId.com.fasterxml.jackson.annotation.JsonProperty --valueType String,String
+
+buzzorfield create --type ~.app.shared.singx.SingxPrefix --field_name entityAudit --dataType singx.app.shared.EntityAudit --Modifier private --annotation javax.persistence.Embedded,com.fasterxml.jackson.annotation.JsonIgnore --initializer "new EntityAudit()"
+
+buzzorfield create --type ~.app.shared.singx.SingxPrefix --field_name systemInfo --dataType singx.app.shared.SystemInfo --Modifier private --annotation javax.persistence.Embedded --initializer "new SystemInfo()"
+
+buzzorfield create --type ~.app.shared.singx.SingxPrefix --field_name primaryDisplay --dataType String --Modifier private --annotation javax.persistence.Transient
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxPrefix --variableName prefixName --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxPrefix --variableName primaryKey --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxPrefix --variableName prefixId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxPrefix --variableName counrtyId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxPrefix --variableName versionId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxPrefix --variableName primaryDisplay --getterMethod false --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxPrefix --variableName systemInfo --getterMethod true --setterMethod true
+
+methodoperation type hardDelete --entityName ~.app.shared.singx.SingxPrefix
+
+methodoperation type setValidator --class ~.app.shared.singx.SingxPrefix
+
+methodoperation type setLoggedUserInfo --class ~.app.shared.singx.SingxPrefix --updateFieldName updatedBy --createFieldName createdBy --activeFieldName activeStatus --isAggregate false
+
+methodoperation type comparatorDefaultBody --class ~.app.shared.singx.SingxPrefix
+
+methodoperation type getPrimayDisplay --class ~.app.shared.singx.SingxPrefix --variableName prefixName
+
+methodoperation type toString --class ~.app.shared.singx.SingxPrefix
+
+methodoperation type hashCode --class ~.app.shared.singx.SingxPrefix --primaryClass true
+
+methodoperation type equals --class ~.app.shared.singx.SingxPrefix --primaryClass true
+
+class --abstract true --class ~.app.server.service.SingxPrefixService
+
+buzzorclass add --className ~.app.server.service.SingxPrefixServiceImpl  --extends singx.app.server.service.SingxPrefixService --value_type string --annotation org.springframework.web.bind.annotation.RestController
+
+Class createAnnotation --toClass ~.app.server.service.SingxPrefixServiceImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.service.SingxPrefixService --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for SingxPrefix Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.service.SingxPrefixServiceImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for SingxPrefix Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+interfacebuzzor add --InterfaceName ~.app.server.repository.SingxPrefixRepository --genericType T --extends com.athena.server.repository.SearchInterface
+
+buzzorclass add --className ~.app.server.repository.SingxPrefixRepositoryImpl --implements --extends com.athena.server.repository.SearchInterfaceImpl --value_type string --implementsGenericType singx.app.server.repository.SingxPrefixRepository#singx.app.shared.singx.SingxPrefix --annotation org.springframework.stereotype.Repository
+
+Class createAnnotation --toClass ~.app.server.repository.SingxPrefixRepositoryImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.repository.SingxPrefixRepository --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for SingxPrefix Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.repository.SingxPrefixRepositoryImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for SingxPrefix Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+buzzorfield create --type ~.app.server.repository.SingxPrefixRepositoryImpl --field_name emfResource --dataType com.athena.config.server.helper.ResourceFactoryManagerHelper --Modifier private --annotation org.springframework.beans.factory.annotation.Autowired
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxPrefix --readOnly false --controllerClass ~.app.server.service.SingxPrefixService  --controllerImplClass ~.app.server.service.SingxPrefixServiceImpl --repositoryClass ~.app.server.repository.SingxPrefixRepository --repositoryImplClass ~.app.server.repository.SingxPrefixRepositoryImpl --methodType findAll --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxPrefixBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxPrefix --readOnly false --controllerClass ~.app.server.service.SingxPrefixService  --controllerImplClass ~.app.server.service.SingxPrefixServiceImpl --repositoryClass ~.app.server.repository.SingxPrefixRepository --repositoryImplClass ~.app.server.repository.SingxPrefixRepositoryImpl --methodType show --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxPrefixBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxPrefix --readOnly false --controllerClass ~.app.server.service.SingxPrefixService  --controllerImplClass ~.app.server.service.SingxPrefixServiceImpl --repositoryClass ~.app.server.repository.SingxPrefixRepository --repositoryImplClass ~.app.server.repository.SingxPrefixRepositoryImpl --methodType save --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxPrefixBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxPrefix --readOnly false --controllerClass ~.app.server.service.SingxPrefixService  --controllerImplClass ~.app.server.service.SingxPrefixServiceImpl --repositoryClass ~.app.server.repository.SingxPrefixRepository --repositoryImplClass ~.app.server.repository.SingxPrefixRepositoryImpl --methodType delete --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxPrefixBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxPrefix --readOnly false --controllerClass ~.app.server.service.SingxPrefixService  --controllerImplClass ~.app.server.service.SingxPrefixServiceImpl --repositoryClass ~.app.server.repository.SingxPrefixRepository --repositoryImplClass ~.app.server.repository.SingxPrefixRepositoryImpl --methodType update --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxPrefixBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxPrefix --readOnly false --controllerClass ~.app.server.service.SingxPrefixService  --controllerImplClass ~.app.server.service.SingxPrefixServiceImpl --repositoryClass ~.app.server.repository.SingxPrefixRepository --repositoryImplClass ~.app.server.repository.SingxPrefixRepositoryImpl --methodType search --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxPrefixBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type BusinessService --sevicePath ~.app.server.service.SingxPrefixServiceImpl --fieldName counrtyId,prefixId --fieldType String,String
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.SingxPrefix --queryName SingxPrefix.DefaultFinders --queryValue "select e from SingxPrefix e where e.systemInfo.activeStatus=1 and e.prefixId LIKE :prefixId and e.counrtyId LIKE :counrtyId"
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.SingxPrefix --queryName SingxPrefix.findByCounrtyId --queryValue "select e from SingxPrefix e where e.systemInfo.activeStatus=1 and e.counrtyId=:counrtyId"
+
+methodoperation type namedQueryMethod --queryName SingxPrefix.findByCounrtyId --qvalue "select e from SingxPrefix e where e.systemInfo.activeStatus=1 and e.counrtyId=:counrtyId" --qarameteres counrtyId --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.SingxPrefix --controllerClass ~.app.server.service.SingxPrefixService --controllerImplClass ~.app.server.service.SingxPrefixServiceImpl --repositoryClass ~.app.server.repository.SingxPrefixRepository --repositoryImplClass ~.app.server.repository.SingxPrefixRepositoryImpl --businessServiceClass ~.app.server.businessservice.SingxPrefixbzService --returnType java.util.List<singx.app.shared.singx.SingxPrefix> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.Country
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.SingxPrefix --queryName SingxPrefix.findById --queryValue "select e from SingxPrefix e where e.systemInfo.activeStatus=1 and  e.prefixId =:prefixId"
+
+methodoperation type namedQueryMethod --queryName SingxPrefix.findById --qvalue "select e from SingxPrefix e where e.systemInfo.activeStatus=1 and  e.prefixId =:prefixId" --qarameteres prefixId --typeOfParameteres String --entityName ~.app.shared.singx.SingxPrefix --controllerClass ~.app.server.service.SingxPrefixService --controllerImplClass ~.app.server.service.SingxPrefixServiceImpl --repositoryClass ~.app.server.repository.SingxPrefixRepository --repositoryImplClass ~.app.server.repository.SingxPrefixRepositoryImpl --businessServiceClass ~.app.server.businessservice.SingxPrefixbzService --returnType singx.app.shared.singx.SingxPrefix --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.SingxPrefix
+
+buzzproperties codeStatus --PropertyFileName status --key SingxPrefix --value 0
+
+
+
+buzzorclass add --className SingxPrefixTestCase  --srcPath test
+Class createAnnotation --toClass SingxPrefixTestCase --annotation org.junit.runner.RunWith --key value.org.junit.runner.RunWith --value org.springframework.test.context.junit4.SpringJUnit4ClassRunner --value_type javaClass
+Class createAnnotation --toClass SingxPrefixTestCase --annotation org.springframework.test.context.web.WebAppConfiguration --key null.org.springframework.test.context.web.WebAppConfiguration --value null --value_type null
+Class createAnnotation --toClass SingxPrefixTestCase --annotation org.springframework.test.context.ContextConfiguration --key classes.org.springframework.test.context.ContextConfiguration --value singx.app.config.WebConfigExtended --value_type javaClass
+Class createAnnotation --toClass SingxPrefixTestCase --annotation org.junit.FixMethodOrder --key value.org.junit.FixMethodOrder.org.junit.FixMethodOrder --value org.junit.runners.MethodSorters$NAME_ASCENDING#org.junit.FixMethodOrder --value_type javatype
+ArrayAnnotation create --type SingxPrefixTestCase --key value --varaiable_name "" --value org.springframework.test.context.support.DependencyInjectionTestExecutionListener,org.springframework.test.context.support.DirtiesContextTestExecutionListener,org.springframework.test.context.transaction.TransactionalTestExecutionListener --valueType javatype,javatype,javatype --annotation org.springframework.test.context.TestExecutionListeners --addTo class
+
+buzzorfield create --type SingxPrefixTestCase --field_name singxprefixRepository --dataType singx.app.server.repository.SingxPrefixRepository<singx.app.shared.singx.SingxPrefix> --Modifier private --valueType 
+
+fieldAnnotation create --type SingxPrefixTestCase --field_name singxprefixRepository --valueType singx.app.server.repository.SingxPrefixRepository --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type SingxPrefixTestCase --field_name runtimeLogInfoHelper --dataType com.athena.framework.server.helper.RuntimeLogInfoHelper --Modifier private --valueType 
+
+fieldAnnotation create --type SingxPrefixTestCase --field_name runtimeLogInfoHelper --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type SingxPrefixTestCase --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --valueType 
+
+fieldAnnotation create --type SingxPrefixTestCase --field_name entityValidator --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper<Object> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type SingxPrefixTestCase --field_name valueGenerator --dataType com.athena.framework.server.test.RandomValueGenerator --Modifier private --initializer "new com.athena.framework.server.test.RandomValueGenerator()"
+
+buzzorfield create --type SingxPrefixTestCase --field_name map --dataType java.util.HashMap<String,Object> --Modifier private --initializer "new HashMap<String,Object>()" --isStatic true
+
+buzzorfield create --type SingxPrefixTestCase --field_name methodCallStack --dataType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --Modifier private --valueType 
+
+fieldAnnotation create --type SingxPrefixTestCase --field_name methodCallStack --valueType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type SingxPrefixTestCase --field_name session --dataType org.springframework.mock.web.MockHttpSession --Modifier protected --valueType javaType
+
+buzzorfield create --type SingxPrefixTestCase --field_name request --dataType org.springframework.mock.web.MockHttpServletRequest --Modifier protected --valueType javaType
+
+buzzorfield create --type SingxPrefixTestCase --field_name response --dataType org.springframework.mock.web.MockHttpServletResponse --Modifier protected --valueType javaType
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name startSession --modifier protected --return_type void --method_body "session = new MockHttpSession();"
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name endSession --modifier protected --return_type void --method_body "session.clearAttributes(); session.invalidate(); session = null;"
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name startRequest --modifier protected --return_type void --method_body "request = new MockHttpServletRequest(); request.setSession(session); org.springframework.web.context.request.RequestContextHolder.setRequestAttributes(new org.springframework.web.context.request.ServletRequestAttributes(request));"
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name endRequest --modifier protected --return_type void --method_body "((org.springframework.web.context.request.ServletRequestAttributes) org.springframework.web.context.request.RequestContextHolder.getRequestAttributes()).requestCompleted(); org.springframework.web.context.request.RequestContextHolder.resetRequestAttributes(); request = null;"
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name before --modifier public --return_type void --method_body "startSession(); startRequest(); setBeans();" --annotation org.junit.Before --key "" --value ""
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name after --modifier public --return_type void --method_body "endSession(); endRequest();" --annotation org.junit.After --key "" --value ""
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name setBeans --modifier private --return_type void --method_body "runtimeLogInfoHelper.createRuntimeLogUserInfo(1, "AAAAA", request.getRemoteHost());   org.junit.Assert.assertNotNull(runtimeLogInfoHelper);methodCallStack.setRequestId(java.util.UUID.randomUUID().toString().toUpperCase()); "
+ Import add --toClass SingxPrefixTestCase --importType singx.app.shared.singx.SingxPrefix
+ Import add --toClass SingxPrefixTestCase --importType com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface.RECORD_TYPE
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name test1Save --modifier public --return_type void --method_body " try { Country country=new Country();country.setCapital("1EMqZJS3zINrd9qEbvtejNXFAEZfMsWN"); country.setCapitalLatitude(4); country.setCapitalLongitude(9); country.setCountryCode1("K8R"); country.setCountryCode2("FwO"); country.setCountryFlag("pYVYvHB1MY8TRtr6pLhduWLsTFtL6YLXMQKj478klb2SSr98VD"); country.setCountryName("44EuuIZKuwZ33jyPuIA2XYG36uM6BqbYe2zW30m8LX8CWPAkcu"); country.setCurrencyCode("Rhm"); country.setCurrencyName("0K5Pi571sYofjDB3UpGBILoexfgKnNA1nCRt8HJR5e0N4WQznr"); country.setCurrencySymbol("MZhOVuZwXZrocnEcfPeI8LmMaVSUCJKn"); country.setIsoNumeric(10); Country CountryTest =countryRepository.save(country);map.put("CountryPrimaryKey", country._getPrimarykey());SingxPrefix singxprefix=new SingxPrefix();singxprefix.setCounrtyId((java.lang.String)CountryTest._getPrimarykey()); /* ******Adding refrenced table data */singxprefix.setPrefixName("Szyh6tWUbvsEGmIzR7LMrc0udFspPPUKed4wQtxiTO9Wt4BCz9"); singxprefix.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);singxprefix.setEntityValidator(entityValidator);singxprefix.isValid();singxprefixRepository.save(singxprefix); map.put("SingxPrefixPrimaryKey", singxprefix._getPrimarykey());} catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {org.junit.Assert.fail(e.getMessage()); }  catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+ Import add --toClass SingxPrefixTestCase --importType singx.app.shared.location.Country
+
+buzzorfield create --type SingxPrefixTestCase --field_name countryRepository --dataType singx.app.server.repository.CountryRepository<singx.app.shared.location.Country> --Modifier private --valueType 
+
+fieldAnnotation create --type SingxPrefixTestCase --field_name countryRepository --valueType singx.app.server.repository.CountryRepository<singx.app.shared.location.Country> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name test2Update --modifier public --return_type void --method_body " try { org.junit.Assert.assertNotNull(map.get("SingxPrefixPrimaryKey"));SingxPrefix singxprefix=singxprefixRepository.findById((java.lang.String)map.get("SingxPrefixPrimaryKey"));singxprefix.setPrefixName("PVYI8rDci44I9e8qL5yoHB7B9y6hVgWgJrbQih5autcFqrZkwq");singxprefix.setVersionId(1);singxprefix.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);singxprefixRepository.update(singxprefix);} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name test3findBycounrtyId --modifier public --return_type void --method_body " try {java.util.List<SingxPrefix> listofcounrtyId=singxprefixRepository.findByCounrtyId((java.lang.String)map.get("CountryPrimaryKey"));if(listofcounrtyId.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name test3FindById --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("SingxPrefixPrimaryKey"));singxprefixRepository.findById((java.lang.String)map.get("SingxPrefixPrimaryKey"));} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass SingxPrefixTestCase --method_name test4Delete --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("SingxPrefixPrimaryKey"));singxprefixRepository.delete((java.lang.String)map.get("SingxPrefixPrimaryKey"));/* Deleting refrenced data */countryRepository.delete((java.lang.String)map.get("CountryPrimaryKey"));/* Deleting refrenced data */} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+
+
+buzzproperties codeStatus --PropertyFileName status --key SingxContacts --value 1
+
+// Entity Creation 
+
+buzzorclass add --className ~.app.shared.singx.SingxContacts --implements java.io.Serializable,com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface --implementsGenericType java.util.Comparator#singx.app.shared.singx.SingxContacts --annotation javax.persistence.Table,javax.persistence.Entity --key type.org.eclipse.persistence.annotations.Cache,size.org.eclipse.persistence.annotations.Cache,expiry.org.eclipse.persistence.annotations.Cache,alwaysRefresh.org.eclipse.persistence.annotations.Cache,disableHits.org.eclipse.persistence.annotations.Cache,name.javax.persistence.Table,createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value org.eclipse.persistence.annotations.CacheType$CACHE#org.eclipse.persistence.annotations.CacheType,64000.org.eclipse.persistence.annotations.Cache,0.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,ast_SingxContacts_T.javax.persistence.Table,john.doe.com.athena.annotation.SourceCodeAuthorClass,.com.athena.annotation.SourceCodeAuthorClass,1.com.athena.annotation.SourceCodeAuthorClass,SingxContacts.com.athena.annotation.SourceCodeAuthorClass,com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity --value_type javaType,Integer,Integer,Boolean,Boolean,String,String,String,String,String,javaType
+
+Persistent add entity --entityName singx.app.shared.singx.SingxContacts
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name firstName --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value firstName.com.fasterxml.jackson.annotation.JsonProperty,firstName.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name firstName --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name firstName --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name middleName --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value middleName.com.fasterxml.jackson.annotation.JsonProperty,middleName.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name middleName --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name lastName --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value lastName.com.fasterxml.jackson.annotation.JsonProperty,lastName.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name lastName --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name lastName --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name dateOfBirth --dataType java.sql.Date --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value dateOfBirth.com.fasterxml.jackson.annotation.JsonProperty,dateOfBirth.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name dateOfBirth --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name emailId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value emailId.com.fasterxml.jackson.annotation.JsonProperty,emailId.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name emailId --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name phoneCountryCode --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value phoneCountryCode.com.fasterxml.jackson.annotation.JsonProperty,phoneCountryCode.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name phoneCountryCode --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name phoneCountryCode --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name phoneNumber --dataType java.lang.Integer --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value phoneNumber.com.fasterxml.jackson.annotation.JsonProperty,phoneNumber.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name phoneNumber --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name phoneNumber --valueType integer --annotation javax.validation.constraints.Min --key value.javax.validation.constraints.Min --value "-2147483648.javax.validation.constraints.Min"
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name phoneNumber --valueType integer --annotation javax.validation.constraints.Max --key value.javax.validation.constraints.Max --value "2147483647.javax.validation.constraints.Max"
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name primaryKey --dataType java.lang.String --Modifier private --annotation javax.persistence.Transient
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name contactId --dataType java.lang.String --Modifier private --valueType String,String,String --annotation javax.persistence.Id,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty,javax.persistence.GeneratedValue --key value.com.fasterxml.jackson.annotation.JsonProperty,generator.javax.persistence.GeneratedValue,name.javax.persistence.Column --value contactId.com.fasterxml.jackson.annotation.JsonProperty,UUIDGenerator.javax.persistence.GeneratedValue,contactId.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.SingxContacts --field_name contactId --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name prefixId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value prefixId.com.fasterxml.jackson.annotation.JsonProperty,prefixId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name genderId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value genderId.com.fasterxml.jackson.annotation.JsonProperty,genderId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name countryId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value countryId.com.fasterxml.jackson.annotation.JsonProperty,countryId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --annotation javax.persistence.Transient,com.fasterxml.jackson.annotation.JsonIgnore
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name versionId --dataType Integer --Modifier private --annotation javax.persistence.Version,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key name.javax.persistence.Column,value.com.fasterxml.jackson.annotation.JsonProperty --value versionId.javax.persistence.Column,versionId.com.fasterxml.jackson.annotation.JsonProperty --valueType String,String
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name entityAudit --dataType singx.app.shared.EntityAudit --Modifier private --annotation javax.persistence.Embedded,com.fasterxml.jackson.annotation.JsonIgnore --initializer "new EntityAudit()"
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name systemInfo --dataType singx.app.shared.SystemInfo --Modifier private --annotation javax.persistence.Embedded --initializer "new SystemInfo()"
+
+buzzorfield create --type ~.app.shared.singx.SingxContacts --field_name primaryDisplay --dataType String --Modifier private --annotation javax.persistence.Transient
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName firstName --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName middleName --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName lastName --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName dateOfBirth --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName emailId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName phoneCountryCode --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName phoneNumber --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName primaryKey --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName contactId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName prefixId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName genderId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName countryId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName versionId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName primaryDisplay --getterMethod false --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.SingxContacts --variableName systemInfo --getterMethod true --setterMethod true
+
+methodoperation type hardDelete --entityName ~.app.shared.singx.SingxContacts
+
+methodoperation type setValidator --class ~.app.shared.singx.SingxContacts
+
+methodoperation type setLoggedUserInfo --class ~.app.shared.singx.SingxContacts --updateFieldName updatedBy --createFieldName createdBy --activeFieldName activeStatus --isAggregate false
+
+methodoperation type comparatorDefaultBody --class ~.app.shared.singx.SingxContacts
+
+methodoperation type getPrimayDisplay --class ~.app.shared.singx.SingxContacts --variableName firstName,lastName
+
+methodoperation type toString --class ~.app.shared.singx.SingxContacts
+
+methodoperation type hashCode --class ~.app.shared.singx.SingxContacts --primaryClass true
+
+methodoperation type equals --class ~.app.shared.singx.SingxContacts --primaryClass true
+
+class --abstract true --class ~.app.server.service.SingxContactsService
+
+buzzorclass add --className ~.app.server.service.SingxContactsServiceImpl  --extends singx.app.server.service.SingxContactsService --value_type string --annotation org.springframework.web.bind.annotation.RestController
+
+Class createAnnotation --toClass ~.app.server.service.SingxContactsServiceImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.service.SingxContactsService --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for SingxContacts Transaction table.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$MEDIUM#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.service.SingxContactsServiceImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for SingxContacts Transaction table.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$MEDIUM#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+interfacebuzzor add --InterfaceName ~.app.server.repository.SingxContactsRepository --genericType T --extends com.athena.server.repository.SearchInterface
+
+buzzorclass add --className ~.app.server.repository.SingxContactsRepositoryImpl --implements --extends com.athena.server.repository.SearchInterfaceImpl --value_type string --implementsGenericType singx.app.server.repository.SingxContactsRepository#singx.app.shared.singx.SingxContacts --annotation org.springframework.stereotype.Repository
+
+Class createAnnotation --toClass ~.app.server.repository.SingxContactsRepositoryImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.repository.SingxContactsRepository --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for SingxContacts Transaction table.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$MEDIUM#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.repository.SingxContactsRepositoryImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for SingxContacts Transaction table.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$MEDIUM#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+buzzorfield create --type ~.app.server.repository.SingxContactsRepositoryImpl --field_name emfResource --dataType com.athena.config.server.helper.ResourceFactoryManagerHelper --Modifier private --annotation org.springframework.beans.factory.annotation.Autowired
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxContacts --readOnly false --controllerClass ~.app.server.service.SingxContactsService  --controllerImplClass ~.app.server.service.SingxContactsServiceImpl --repositoryClass ~.app.server.repository.SingxContactsRepository --repositoryImplClass ~.app.server.repository.SingxContactsRepositoryImpl --methodType findAll --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxContactsBusinessService --isUserAccess false --isAggregateRoot true --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxContacts --readOnly false --controllerClass ~.app.server.service.SingxContactsService  --controllerImplClass ~.app.server.service.SingxContactsServiceImpl --repositoryClass ~.app.server.repository.SingxContactsRepository --repositoryImplClass ~.app.server.repository.SingxContactsRepositoryImpl --methodType show --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxContactsBusinessService --isUserAccess false --isAggregateRoot true --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxContacts --readOnly false --controllerClass ~.app.server.service.SingxContactsService  --controllerImplClass ~.app.server.service.SingxContactsServiceImpl --repositoryClass ~.app.server.repository.SingxContactsRepository --repositoryImplClass ~.app.server.repository.SingxContactsRepositoryImpl --methodType save --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxContactsBusinessService --isUserAccess false --isAggregateRoot true --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxContacts --readOnly false --controllerClass ~.app.server.service.SingxContactsService  --controllerImplClass ~.app.server.service.SingxContactsServiceImpl --repositoryClass ~.app.server.repository.SingxContactsRepository --repositoryImplClass ~.app.server.repository.SingxContactsRepositoryImpl --methodType delete --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxContactsBusinessService --isUserAccess false --isAggregateRoot true --isBiz false --isInheritance false --isConcreteClass false
+
+
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxContacts --readOnly false --controllerClass ~.app.server.service.SingxContactsService  --controllerImplClass ~.app.server.service.SingxContactsServiceImpl --repositoryClass ~.app.server.repository.SingxContactsRepository --repositoryImplClass ~.app.server.repository.SingxContactsRepositoryImpl --methodType update --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxContactsBusinessService --isUserAccess false --isAggregateRoot true --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.SingxContacts --readOnly false --controllerClass ~.app.server.service.SingxContactsService  --controllerImplClass ~.app.server.service.SingxContactsServiceImpl --repositoryClass ~.app.server.repository.SingxContactsRepository --repositoryImplClass ~.app.server.repository.SingxContactsRepositoryImpl --methodType search --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.SingxContactsBusinessService --isUserAccess false --isAggregateRoot true --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type BusinessService --sevicePath ~.app.server.service.SingxContactsServiceImpl --fieldName contactId,countryId --fieldType String,String
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.SingxContacts --queryName SingxContacts.DefaultFinders --queryValue "select e from SingxContacts e where e.systemInfo.activeStatus=1 and e.contactId LIKE :contactId and e.countryId LIKE :countryId"
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.SingxContacts --queryName SingxContacts.findByPrefixId --queryValue "select e from SingxContacts e where e.systemInfo.activeStatus=1 and e.prefixId=:prefixId"
+
+methodoperation type namedQueryMethod --queryName SingxContacts.findByPrefixId --qvalue "select e from SingxContacts e where e.systemInfo.activeStatus=1 and e.prefixId=:prefixId" --qarameteres prefixId --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.SingxContacts --controllerClass ~.app.server.service.SingxContactsService --controllerImplClass ~.app.server.service.SingxContactsServiceImpl --repositoryClass ~.app.server.repository.SingxContactsRepository --repositoryImplClass ~.app.server.repository.SingxContactsRepositoryImpl --businessServiceClass ~.app.server.businessservice.SingxContactsbzService --returnType java.util.List<singx.app.shared.singx.SingxContacts> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.SingxPrefix
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.SingxContacts --queryName SingxContacts.findByGenderId --queryValue "select e from SingxContacts e where e.systemInfo.activeStatus=1 and e.genderId=:genderId"
+
+methodoperation type namedQueryMethod --queryName SingxContacts.findByGenderId --qvalue "select e from SingxContacts e where e.systemInfo.activeStatus=1 and e.genderId=:genderId" --qarameteres genderId --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.SingxContacts --controllerClass ~.app.server.service.SingxContactsService --controllerImplClass ~.app.server.service.SingxContactsServiceImpl --repositoryClass ~.app.server.repository.SingxContactsRepository --repositoryImplClass ~.app.server.repository.SingxContactsRepositoryImpl --businessServiceClass ~.app.server.businessservice.SingxContactsbzService --returnType java.util.List<singx.app.shared.singx.SingxContacts> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.Gender
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.SingxContacts --queryName SingxContacts.findByCountryId --queryValue "select e from SingxContacts e where e.systemInfo.activeStatus=1 and e.countryId=:countryId"
+
+methodoperation type namedQueryMethod --queryName SingxContacts.findByCountryId --qvalue "select e from SingxContacts e where e.systemInfo.activeStatus=1 and e.countryId=:countryId" --qarameteres countryId --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.SingxContacts --controllerClass ~.app.server.service.SingxContactsService --controllerImplClass ~.app.server.service.SingxContactsServiceImpl --repositoryClass ~.app.server.repository.SingxContactsRepository --repositoryImplClass ~.app.server.repository.SingxContactsRepositoryImpl --businessServiceClass ~.app.server.businessservice.SingxContactsbzService --returnType java.util.List<singx.app.shared.singx.SingxContacts> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.Country
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.SingxContacts --queryName SingxContacts.findById --queryValue "select e from SingxContacts e where e.systemInfo.activeStatus=1 and  e.contactId =:contactId"
+
+methodoperation type namedQueryMethod --queryName SingxContacts.findById --qvalue "select e from SingxContacts e where e.systemInfo.activeStatus=1 and  e.contactId =:contactId" --qarameteres contactId --typeOfParameteres String --entityName ~.app.shared.singx.SingxContacts --controllerClass ~.app.server.service.SingxContactsService --controllerImplClass ~.app.server.service.SingxContactsServiceImpl --repositoryClass ~.app.server.repository.SingxContactsRepository --repositoryImplClass ~.app.server.repository.SingxContactsRepositoryImpl --businessServiceClass ~.app.server.businessservice.SingxContactsbzService --returnType singx.app.shared.singx.SingxContacts --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.SingxContacts
+
+buzzproperties codeStatus --PropertyFileName status --key SingxContacts --value 0
+
+
+
+buzzorclass add --className SingxContactsTestCase  --srcPath test
+Class createAnnotation --toClass SingxContactsTestCase --annotation org.junit.runner.RunWith --key value.org.junit.runner.RunWith --value org.springframework.test.context.junit4.SpringJUnit4ClassRunner --value_type javaClass
+Class createAnnotation --toClass SingxContactsTestCase --annotation org.springframework.test.context.web.WebAppConfiguration --key null.org.springframework.test.context.web.WebAppConfiguration --value null --value_type null
+Class createAnnotation --toClass SingxContactsTestCase --annotation org.springframework.test.context.ContextConfiguration --key classes.org.springframework.test.context.ContextConfiguration --value singx.app.config.WebConfigExtended --value_type javaClass
+Class createAnnotation --toClass SingxContactsTestCase --annotation org.junit.FixMethodOrder --key value.org.junit.FixMethodOrder.org.junit.FixMethodOrder --value org.junit.runners.MethodSorters$NAME_ASCENDING#org.junit.FixMethodOrder --value_type javatype
+ArrayAnnotation create --type SingxContactsTestCase --key value --varaiable_name "" --value org.springframework.test.context.support.DependencyInjectionTestExecutionListener,org.springframework.test.context.support.DirtiesContextTestExecutionListener,org.springframework.test.context.transaction.TransactionalTestExecutionListener --valueType javatype,javatype,javatype --annotation org.springframework.test.context.TestExecutionListeners --addTo class
+
+buzzorfield create --type SingxContactsTestCase --field_name singxcontactsRepository --dataType singx.app.server.repository.SingxContactsRepository<singx.app.shared.singx.SingxContacts> --Modifier private --valueType 
+
+fieldAnnotation create --type SingxContactsTestCase --field_name singxcontactsRepository --valueType singx.app.server.repository.SingxContactsRepository --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type SingxContactsTestCase --field_name runtimeLogInfoHelper --dataType com.athena.framework.server.helper.RuntimeLogInfoHelper --Modifier private --valueType 
+
+fieldAnnotation create --type SingxContactsTestCase --field_name runtimeLogInfoHelper --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type SingxContactsTestCase --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --valueType 
+
+fieldAnnotation create --type SingxContactsTestCase --field_name entityValidator --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper<Object> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type SingxContactsTestCase --field_name valueGenerator --dataType com.athena.framework.server.test.RandomValueGenerator --Modifier private --initializer "new com.athena.framework.server.test.RandomValueGenerator()"
+
+buzzorfield create --type SingxContactsTestCase --field_name map --dataType java.util.HashMap<String,Object> --Modifier private --initializer "new HashMap<String,Object>()" --isStatic true
+
+buzzorfield create --type SingxContactsTestCase --field_name methodCallStack --dataType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --Modifier private --valueType 
+
+fieldAnnotation create --type SingxContactsTestCase --field_name methodCallStack --valueType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type SingxContactsTestCase --field_name session --dataType org.springframework.mock.web.MockHttpSession --Modifier protected --valueType javaType
+
+buzzorfield create --type SingxContactsTestCase --field_name request --dataType org.springframework.mock.web.MockHttpServletRequest --Modifier protected --valueType javaType
+
+buzzorfield create --type SingxContactsTestCase --field_name response --dataType org.springframework.mock.web.MockHttpServletResponse --Modifier protected --valueType javaType
+
+buzzormethod add --toClass SingxContactsTestCase --method_name startSession --modifier protected --return_type void --method_body "session = new MockHttpSession();"
+
+buzzormethod add --toClass SingxContactsTestCase --method_name endSession --modifier protected --return_type void --method_body "session.clearAttributes(); session.invalidate(); session = null;"
+
+buzzormethod add --toClass SingxContactsTestCase --method_name startRequest --modifier protected --return_type void --method_body "request = new MockHttpServletRequest(); request.setSession(session); org.springframework.web.context.request.RequestContextHolder.setRequestAttributes(new org.springframework.web.context.request.ServletRequestAttributes(request));"
+
+buzzormethod add --toClass SingxContactsTestCase --method_name endRequest --modifier protected --return_type void --method_body "((org.springframework.web.context.request.ServletRequestAttributes) org.springframework.web.context.request.RequestContextHolder.getRequestAttributes()).requestCompleted(); org.springframework.web.context.request.RequestContextHolder.resetRequestAttributes(); request = null;"
+
+buzzormethod add --toClass SingxContactsTestCase --method_name before --modifier public --return_type void --method_body "startSession(); startRequest(); setBeans();" --annotation org.junit.Before --key "" --value ""
+
+buzzormethod add --toClass SingxContactsTestCase --method_name after --modifier public --return_type void --method_body "endSession(); endRequest();" --annotation org.junit.After --key "" --value ""
+
+buzzormethod add --toClass SingxContactsTestCase --method_name setBeans --modifier private --return_type void --method_body "runtimeLogInfoHelper.createRuntimeLogUserInfo(1, "AAAAA", request.getRemoteHost());   org.junit.Assert.assertNotNull(runtimeLogInfoHelper);methodCallStack.setRequestId(java.util.UUID.randomUUID().toString().toUpperCase()); "
+ Import add --toClass SingxContactsTestCase --importType singx.app.shared.singx.SingxContacts
+ Import add --toClass SingxContactsTestCase --importType com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface.RECORD_TYPE
+
+buzzormethod add --toClass SingxContactsTestCase --method_name test1Save --modifier public --return_type void --method_body " try { Country country=new Country();country.setCapital("9te4ppdzX8519SDakrMPW9n9GV241pZJ"); country.setCapitalLatitude(8); country.setCapitalLongitude(2); country.setCountryCode1("PzF"); country.setCountryCode2("oN4"); country.setCountryFlag("tf1dGvGKpAL7zaaTHcXuxCqeSwZktTzWbLxItdmYdCBwKpD4iv"); country.setCountryName("YsUUMjCZS14oXGHtCtmww8bretMv6fBkl2eYhWx7fVXPTWr6DV"); country.setCurrencyCode("oRS"); country.setCurrencyName("l4nXlIhLNM2NBBTxLpsROBTm0mhRveHhePFv4QAghjY1zi3pi8"); country.setCurrencySymbol("ncPbG8xnKxs2Q6VWHjFZLZKi0Q82SbDF"); country.setIsoNumeric(6); Country CountryTest =countryRepository.save(country);map.put("CountryPrimaryKey", country._getPrimarykey());Gender gender=new Gender();gender.setGender("pdgNYK6V8sYlahOaGkZvg8xWhAEQyw6gZMBUJUy1XuBkcIZHKy"); Gender GenderTest =genderRepository.save(gender);map.put("GenderPrimaryKey", gender._getPrimarykey());SingxPrefix singxprefix=new SingxPrefix();singxprefix.setCounrtyId((java.lang.String)CountryTest._getPrimarykey()); /* ******Adding refrenced table data */singxprefix.setPrefixName("806tXANPkrijcSG4TU4LQeiXle6348CPYM5drl0E7tyGnN0P4y"); SingxPrefix SingxPrefixTest =singxprefixRepository.save(singxprefix);map.put("SingxPrefixPrimaryKey", singxprefix._getPrimarykey());SingxContacts singxcontacts=new SingxContacts();singxcontacts.setCountryId((java.lang.String)CountryTest._getPrimarykey()); /* ******Adding refrenced table data */singxcontacts.setDateOfBirth(new java.sql.Date(123456789)); singxcontacts.setEmailId("UHivnlsrZd2RKZuMngxKl2QnAB4pjJJyglDAtW7SYKlk02oMlU"); singxcontacts.setFirstName("2rQD7hEO7amfIjvVw5LqwwnXh6X5tXEwieFTkXymNERtELbqXQ"); singxcontacts.setGenderId((java.lang.String)GenderTest._getPrimarykey()); /* ******Adding refrenced table data */singxcontacts.setLastName("aVKlqGFUSQqqoBmpLAzAyXn3c0cobZHlNnlw9WyjeH13DoB92e"); singxcontacts.setMiddleName("Fb25gj2igiJyiVvnKLEU15LuXi8AyqMkPEBjTAWMiOYwVZFwFz"); singxcontacts.setPhoneCountryCode("zJa2g0cUGzzPVgM8G5ucKQdrkddlNjHLodFVcpQLTDDTpYPoZT"); singxcontacts.setPhoneNumber(2147483647); singxcontacts.setPrefixId((java.lang.String)SingxPrefixTest._getPrimarykey()); /* ******Adding refrenced table data */singxcontacts.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);singxcontacts.setEntityValidator(entityValidator);singxcontacts.isValid();singxcontactsRepository.save(singxcontacts); map.put("SingxContactsPrimaryKey", singxcontacts._getPrimarykey());} catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {org.junit.Assert.fail(e.getMessage()); }  catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+ Import add --toClass SingxContactsTestCase --importType singx.app.shared.location.Country
+
+buzzorfield create --type SingxContactsTestCase --field_name countryRepository --dataType singx.app.server.repository.CountryRepository<singx.app.shared.location.Country> --Modifier private --valueType 
+
+fieldAnnotation create --type SingxContactsTestCase --field_name countryRepository --valueType singx.app.server.repository.CountryRepository<singx.app.shared.location.Country> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+ Import add --toClass SingxContactsTestCase --importType singx.app.shared.contacts.Gender
+
+buzzorfield create --type SingxContactsTestCase --field_name genderRepository --dataType singx.app.server.repository.GenderRepository<singx.app.shared.contacts.Gender> --Modifier private --valueType 
+
+fieldAnnotation create --type SingxContactsTestCase --field_name genderRepository --valueType singx.app.server.repository.GenderRepository<singx.app.shared.contacts.Gender> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+ Import add --toClass SingxContactsTestCase --importType singx.app.shared.singx.SingxPrefix
+
+buzzorfield create --type SingxContactsTestCase --field_name singxprefixRepository --dataType singx.app.server.repository.SingxPrefixRepository<singx.app.shared.singx.SingxPrefix> --Modifier private --valueType 
+
+fieldAnnotation create --type SingxContactsTestCase --field_name singxprefixRepository --valueType singx.app.server.repository.SingxPrefixRepository<singx.app.shared.singx.SingxPrefix> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+ Import add --toClass SingxContactsTestCase --importType singx.app.shared.location.Country
+
+buzzormethod add --toClass SingxContactsTestCase --method_name test2Update --modifier public --return_type void --method_body " try { org.junit.Assert.assertNotNull(map.get("SingxContactsPrimaryKey"));SingxContacts singxcontacts=singxcontactsRepository.findById((java.lang.String)map.get("SingxContactsPrimaryKey"));singxcontacts.setDateOfBirth(new java.sql.Date(123456789));singxcontacts.setEmailId("GGjCSDu8m9Mf6zRarlX4oWTthOgEHr0C2a5o5Ta2BaRI6joGEj");singxcontacts.setFirstName("DUPt3fyVmkJlaNaiVdjQMjl1rDTtuSlaKlETQGqiLUeaGskQqE");singxcontacts.setLastName("nLE3puk5XT2xLrQ633rw7I7PcKTHxKyyGETtVXraqrnFMR8CKv");singxcontacts.setMiddleName("D9fwaCn3mVrvufOQx7d6gDLtkoyId9XDK57Q02Z4qgObKOSqZM");singxcontacts.setPhoneCountryCode("AQ2Qzhla2OXY2EFADwtsZANnXmMAkQQmket5grPH2wN5hPWxLg");singxcontacts.setPhoneNumber(2147483647);singxcontacts.setVersionId(1);singxcontacts.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);singxcontactsRepository.update(singxcontacts);} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass SingxContactsTestCase --method_name test3FindById --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("SingxContactsPrimaryKey"));singxcontactsRepository.findById((java.lang.String)map.get("SingxContactsPrimaryKey"));} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass SingxContactsTestCase --method_name test3findBycountryId --modifier public --return_type void --method_body " try {java.util.List<SingxContacts> listofcountryId=singxcontactsRepository.findByCountryId((java.lang.String)map.get("CountryPrimaryKey"));if(listofcountryId.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass SingxContactsTestCase --method_name test3findBygenderId --modifier public --return_type void --method_body " try {java.util.List<SingxContacts> listofgenderId=singxcontactsRepository.findByGenderId((java.lang.String)map.get("GenderPrimaryKey"));if(listofgenderId.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass SingxContactsTestCase --method_name test3findByprefixId --modifier public --return_type void --method_body " try {java.util.List<SingxContacts> listofprefixId=singxcontactsRepository.findByPrefixId((java.lang.String)map.get("SingxPrefixPrimaryKey"));if(listofprefixId.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass SingxContactsTestCase --method_name test4Delete --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("SingxContactsPrimaryKey"));singxcontactsRepository.delete((java.lang.String)map.get("SingxContactsPrimaryKey"));/* Deleting refrenced data */singxprefixRepository.delete((java.lang.String)map.get("SingxPrefixPrimaryKey"));/* Deleting refrenced data */genderRepository.delete((java.lang.String)map.get("GenderPrimaryKey"));/* Deleting refrenced data */countryRepository.delete((java.lang.String)map.get("CountryPrimaryKey"));/* Deleting refrenced data */} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+
+
+
+
+quit

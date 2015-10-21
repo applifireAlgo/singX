@@ -1,0 +1,31 @@
+Ext.define('Buzzor.singx.shared.singx.model.singx.UserContactMapModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "userId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "contactid",
+          "reference": "SingxContacts",
+          "defaultValue": ""
+     }, {
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "mapId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

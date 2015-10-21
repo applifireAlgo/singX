@@ -1,0 +1,8 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-09 12:49:07
+ development mode --enabled true 
+project --topLevelPackage singx --projectName singxScheduler
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-09 12:49:09
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-09 12:49:09
+// script --file singxScheduler.cf
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-09 12:49:09

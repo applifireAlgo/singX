@@ -1,0 +1,43 @@
+Ext.define('Buzzor.singx.shared.singx.model.singx.GeneralRegistrationRuleModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "configId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "countryid",
+          "reference": "Country",
+          "defaultValue": ""
+     }, {
+          "name": "minShareHoldingPer",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "maxAccAllowed",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "dailyMaxTransferLimit",
+          "type": "number",
+          "defaultValue": ""
+     }, {
+          "name": "dailyTransferEnhancedLimit",
+          "type": "number",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

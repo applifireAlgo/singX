@@ -1,0 +1,20 @@
+
+
+
+
+ development mode --enabled true 
+
+
+
+buzzorclass add --className ~.app.shared.backoffice.ACL.ContactACL 
+methodoperation type setParameterizedConstructor --class ~.app.shared.backoffice.ACL.ContactACL --fields --constructorBody "this.customercontadto = _customercontadto;this.doMapping();" --parameterName _customercontadto --parameterType singx.app.shared.backoffice.singx.CustomerContaDTO
+
+buzzorfield create --type ~.app.shared.backoffice.ACL.ContactACL --field_name customercontadto --dataType singx.app.shared.backoffice.singx.CustomerContaDTO --Modifier private --valueType String --isStatic false
+
+buzzorfield create --type ~.app.shared.backoffice.ACL.ContactACL --field_name singxcontacts --dataType singx.app.shared.singx.SingxContacts --Modifier private --valueType String --isStatic false
+
+buzzormethod add --toClass ~.app.shared.backoffice.ACL.ContactACL --method_name contactACL --modifier public --return_type singx.app.shared.singx.SingxContacts --method_body "return singxcontacts;" --key "" --value ""
+
+buzzormethod add --toClass ~.app.shared.backoffice.ACL.ContactACL --method_name doMapping --modifier public --return_type void --method_body "singxcontacts=new  SingxContacts();singxcontacts.setCountryId(customercontadto.getCountryId());singxcontacts.setDateOfBirth(customercontadto.getDateOfBirth());singxcontacts.setEmailId(customercontadto.getEmailId());singxcontacts.setFirstName(customercontadto.getFirstName());singxcontacts.setGenderId(customercontadto.getGenderId());singxcontacts.setLastName(customercontadto.getLastName());singxcontacts.setMiddleName(customercontadto.getMiddleName());singxcontacts.setPhoneCountryCode(customercontadto.getPhoneCountryCode());singxcontacts.setPhoneNumber(customercontadto.getPhoneNumber());singxcontacts.setPrefixId(customercontadto.getPrefixId());" --key "" --value ""
+
+quit

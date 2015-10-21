@@ -1,0 +1,13 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-19 07:33:32
+ development mode --enabled true 
+buzzorclass add --className ~.app.shared.backoffice.ACL.CorporateCustACL 
+methodoperation type setParameterizedConstructor --class ~.app.shared.backoffice.ACL.CorporateCustACL --fields --constructorBody "this.customercontadto = _customercontadto;this.doMapping();" --parameterName _customercontadto --parameterType singx.app.shared.backoffice.singx.CustomerContaDTO
+buzzorfield create --type ~.app.shared.backoffice.ACL.CorporateCustACL --field_name customercontadto --dataType singx.app.shared.backoffice.singx.CustomerContaDTO --Modifier private --valueType String --isStatic false
+buzzorfield create --type ~.app.shared.backoffice.ACL.CorporateCustACL --field_name corporateregdetail --dataType singx.app.shared.singx.CorporateRegDetail --Modifier private --valueType String --isStatic false
+buzzormethod add --toClass ~.app.shared.backoffice.ACL.CorporateCustACL --method_name corpCustACL --modifier public --return_type singx.app.shared.singx.CorporateRegDetail --method_body "return corporateregdetail;" --key "" --value ""
+buzzormethod add --toClass ~.app.shared.backoffice.ACL.CorporateCustACL --method_name doMapping --modifier public --return_type void --method_body "corporateregdetail=new  CorporateRegDetail();corporateregdetail.setCompanyCategoryId(customercontadto.getCompanyCategoryId());corporateregdetail.setCompanyName(customercontadto.getCompanyName());corporateregdetail.setCompanyTypeId(customercontadto.getCompanyTypeId());corporateregdetail.setCustomerId(customercontadto.getCustomerId());corporateregdetail.setHeadOffice(customercontadto.getHeadOffice());corporateregdetail.setMapId(customercontadto.getMapId());corporateregdetail.setRegistrationNumber(customercontadto.getRegistrationNumber());" --key "" --value ""
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-19 07:33:52
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-19 07:33:52
+// script --file singx.cf
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-19 07:33:52

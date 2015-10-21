@@ -1,0 +1,15 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-09 12:49:53
+ development mode --enabled true 
+buzzorproject --topLevelPackage singx --isRuleEngine true --projectName singxScheduler --sourceCodeLocation /mnt/applifire/appConfigTemplate/appSourceCode/ --tomcatDeployLocation "" --tomcatAbsolutePath /Softwares/tomcat8/webapps ---userName root --password root --schema jdbc:mysql://localhost:3306/information_schema --solrhome /mnt/applifire/customers/ba9dced8-453e-49a3-b627-d497a1f91b17/user/18D01ABF-F632-496A-B379-FC50EDEAB8C0/GPTXEE79MJE7SBT6OCAIKQ/solr-4.9.0 --isSpringBatch true
+entityManagerFactoryBean add property --name packagesToScan --value singx.app,com.athena,com.spartan
+Persistent change persistentUnitName --name singxScheduler
+Persistent add property --name eclipselink.dialect --value org.eclipse.persistence.platform.database.MySQLPlatform
+Persistent add property --name javax.persistence.jdbc.url --value jdbc:mysql://localhost:3306/singxdb
+Persistent add property --name javax.persistence.jdbc.user --value singx
+Persistent add property --name javax.persistence.jdbc.password --value Glass4#21
+Persistent add property --name javax.persistence.jdbc.driver --value com.mysql.jdbc.Driver
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-09 12:50:03
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-09 12:50:03
+// script --file singxScheduler.cf
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-09 12:50:03

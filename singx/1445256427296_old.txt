@@ -1,0 +1,23 @@
+
+
+
+
+ development mode --enabled true 
+
+
+
+buzzorclass add --className singx.app.shared.backoffice.GetICProfileStatus --implements com.athena.server.bizService.DTOMapperInterface
+
+buzzorfield create --type singx.app.shared.backoffice.GetICProfileStatus --field_name profileStatus --dataType java.lang.Long --Modifier private --valueType null
+
+methodoperation type setParameterizedConstructor --class singx.app.shared.backoffice.GetICProfileStatus --parameterType Object --parameterName obj --constructorBody "if (obj != null) {profileStatus=(java.lang.Long)obj;} else {profileStatus=null;}"
+
+methodoperation type getSetMethod --class singx.app.shared.backoffice.GetICProfileStatus --variableName profileStatus --getterMethod true --setterMethod false
+
+
+
+buzzormethod add --toClass ~.app.server.businessservice.backoffice.IndividualCustomerStatusServiceBzService --method_name executeQueryGetICProfileStatus --modifier public --return_type java.util.List<singx.app.shared.backoffice.GetICProfileStatus> --parameter_name ccmapcontactid, --parameter_value java.lang.String, --throws Exception
+
+buzzormethod add --toClass ~.app.server.businessservice.backoffice.IndividualCustomerStatusServiceBzServiceImpl --method_name executeQueryGetICProfileStatus --modifier public --return_type java.util.List<singx.app.shared.backoffice.GetICProfileStatus> --parameter_name ccmapcontactid, --parameter_value java.lang.String, --method_body "java.util.List<singx.app.shared.backoffice.GetICProfileStatus> listDtoInterface=new java.util.ArrayList<singx.app.shared.backoffice.GetICProfileStatus>();try{atg.taglib.json.util.JSONObject queryParams = new atg.taglib.json.util.JSONObject();queryParams.put("queryId","DAD4A65D-220D-47E0-A6D0-AEFDEC0DC8AC");atg.taglib.json.util.JSONArray jsonArray = new atg.taglib.json.util.JSONArray();atg.taglib.json.util.JSONObject jsonObjectCcmapcontactid= new atg.taglib.json.util.JSONObject();jsonObjectCcmapcontactid.put("name","ccmapcontactid");jsonObjectCcmapcontactid.put("value",ccmapcontactid);jsonObjectCcmapcontactid.put("datatype","VARCHAR");jsonObjectCcmapcontactid.put("index",1);jsonArray.add(jsonObjectCcmapcontactid);queryParams.put("queryCriteria",jsonArray);listDtoInterface= queryExecuterService.getAllQueryData("singx.app.shared.backoffice.GetICProfileStatus",queryParams);}catch(Exception e){e.printStackTrace();}return listDtoInterface;}" --annotation java.lang.Override --key "" --value "" --throws Exception
+
+quit

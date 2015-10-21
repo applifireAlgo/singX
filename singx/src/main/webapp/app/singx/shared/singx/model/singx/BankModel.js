@@ -1,0 +1,38 @@
+Ext.define('Buzzor.singx.shared.singx.model.singx.BankModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "bankId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "bankName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "bankCode",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "countryid",
+          "reference": "Country",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "WireTransferMode",
+          "reference": "WireTransferModeModel"
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

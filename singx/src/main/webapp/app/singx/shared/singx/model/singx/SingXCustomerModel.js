@@ -1,0 +1,35 @@
+Ext.define('Buzzor.singx.shared.singx.model.singx.SingXCustomerModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "customerId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "countryId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "customerTypeId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "emailId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

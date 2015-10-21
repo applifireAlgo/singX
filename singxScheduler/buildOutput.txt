@@ -1,0 +1,22 @@
+AppliFire Platform : CC (Gradle) Docker Container v1.0 - Starting the container.....
+WS Volume to be mounted   ... /home/applifire/workspace/singxScheduler 
+GRADLE Command .............. build 
+:compileJavaNote: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+:processResources
+:classes
+:war
+:assemble
+:compileTestJava UP-TO-DATE
+:copyTestResources
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:check UP-TO-DATE
+:build
+
+BUILD SUCCESSFUL
+
+Total time: 10.119 secs
+Mon Oct 19 13:25:17 UTC 2015 : Code Compiler : Docker Container shutdown complete..... Docker Exit = 0 

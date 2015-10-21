@@ -1,0 +1,14 @@
+ExitCode=0
+TotalTimeTaken=6.723
+TotalFiles=69
+TotalFolders=77
+TotalJavaFiles=16
+TotalJsFiles=11
+TotalJsonFiles=2
+TotalCssFiles=7
+TotalXmlFiles=7
+TotalPropertiesFiles=1
+Fri Oct 9 12:49:52 UTC 2015 : Code Factory Process Started for instructions singxScheduler.cf
+Fri Oct 9 12:50:04 UTC 2015 : Code Factory : Total Files created : 69 | Total Time Taken : 6.723 in seconds
+Fri Oct 9 12:50:04 UTC 2015 : Code Factory : Process Completed Blue Print instructions
+Fri Oct  9 12:50:04 UTC 2015 : Code Factory : Exited with the code 0

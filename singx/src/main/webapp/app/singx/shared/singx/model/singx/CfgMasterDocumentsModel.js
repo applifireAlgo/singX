@@ -1,0 +1,43 @@
+Ext.define('Buzzor.singx.shared.singx.model.singx.CfgMasterDocumentsModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "documentID",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "documentName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "isReferenceNoReqd",
+          "type": "boolean",
+          "defaultValue": ""
+     }, {
+          "name": "isIssueDateReqd",
+          "type": "boolean",
+          "defaultValue": ""
+     }, {
+          "name": "isExpiryDateReqd",
+          "type": "boolean",
+          "defaultValue": ""
+     }, {
+          "name": "remarks",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

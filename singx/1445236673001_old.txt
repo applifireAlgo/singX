@@ -1,0 +1,250 @@
+
+
+
+
+ development mode --enabled true 
+
+
+
+buzzproperties codeStatus --PropertyFileName status --key IndividualRegDetail --value 1
+
+// Entity Creation 
+
+buzzorclass add --className ~.app.shared.singx.IndividualRegDetail --implements java.io.Serializable,com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface --implementsGenericType java.util.Comparator#singx.app.shared.singx.IndividualRegDetail --annotation javax.persistence.Table,javax.persistence.Entity --key type.org.eclipse.persistence.annotations.Cache,size.org.eclipse.persistence.annotations.Cache,expiry.org.eclipse.persistence.annotations.Cache,alwaysRefresh.org.eclipse.persistence.annotations.Cache,disableHits.org.eclipse.persistence.annotations.Cache,name.javax.persistence.Table,createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value org.eclipse.persistence.annotations.CacheType$CACHE#org.eclipse.persistence.annotations.CacheType,64000.org.eclipse.persistence.annotations.Cache,0.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,ast_IndividualRegDetail_T.javax.persistence.Table,john.doe.com.athena.annotation.SourceCodeAuthorClass,.com.athena.annotation.SourceCodeAuthorClass,1.com.athena.annotation.SourceCodeAuthorClass,IndividualRegDetail.com.athena.annotation.SourceCodeAuthorClass,com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity --value_type javaType,Integer,Integer,Boolean,Boolean,String,String,String,String,String,javaType
+
+Persistent add entity --entityName singx.app.shared.singx.IndividualRegDetail
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name nationalityId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value nationalityId.com.fasterxml.jackson.annotation.JsonProperty,nationalityId.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.IndividualRegDetail --field_name nationalityId --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.IndividualRegDetail --field_name nationalityId --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name idProofValue --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value idProofValue.com.fasterxml.jackson.annotation.JsonProperty,idProofValue.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.IndividualRegDetail --field_name idProofValue --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.IndividualRegDetail --field_name idProofValue --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#50
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name expiryDate --dataType java.sql.Date --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value expiryDate.com.fasterxml.jackson.annotation.JsonProperty,expiryDate.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.IndividualRegDetail --field_name expiryDate --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name primaryKey --dataType java.lang.String --Modifier private --annotation javax.persistence.Transient
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name mapId --dataType java.lang.String --Modifier private --valueType String,String,String --annotation javax.persistence.Id,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty,javax.persistence.GeneratedValue --key value.com.fasterxml.jackson.annotation.JsonProperty,generator.javax.persistence.GeneratedValue,name.javax.persistence.Column --value mapId.com.fasterxml.jackson.annotation.JsonProperty,UUIDGenerator.javax.persistence.GeneratedValue,mapId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name customerId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value customerId.com.fasterxml.jackson.annotation.JsonProperty,customerId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name residenceTypeId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value residenceTypeId.com.fasterxml.jackson.annotation.JsonProperty,residenceTypeId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name documentId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value documentId.com.fasterxml.jackson.annotation.JsonProperty,documentId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --annotation javax.persistence.Transient,com.fasterxml.jackson.annotation.JsonIgnore
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name versionId --dataType Integer --Modifier private --annotation javax.persistence.Version,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key name.javax.persistence.Column,value.com.fasterxml.jackson.annotation.JsonProperty --value versionId.javax.persistence.Column,versionId.com.fasterxml.jackson.annotation.JsonProperty --valueType String,String
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name entityAudit --dataType singx.app.shared.EntityAudit --Modifier private --annotation javax.persistence.Embedded,com.fasterxml.jackson.annotation.JsonIgnore --initializer "new EntityAudit()"
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name systemInfo --dataType singx.app.shared.SystemInfo --Modifier private --annotation javax.persistence.Embedded --initializer "new SystemInfo()"
+
+buzzorfield create --type ~.app.shared.singx.IndividualRegDetail --field_name primaryDisplay --dataType String --Modifier private --annotation javax.persistence.Transient
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName nationalityId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName idProofValue --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName expiryDate --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName primaryKey --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName mapId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName customerId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName residenceTypeId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName documentId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName versionId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName primaryDisplay --getterMethod false --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.IndividualRegDetail --variableName systemInfo --getterMethod true --setterMethod true
+
+methodoperation type hardDelete --entityName ~.app.shared.singx.IndividualRegDetail
+
+methodoperation type setValidator --class ~.app.shared.singx.IndividualRegDetail
+
+methodoperation type setLoggedUserInfo --class ~.app.shared.singx.IndividualRegDetail --updateFieldName updatedBy --createFieldName createdBy --activeFieldName activeStatus --isAggregate false
+
+methodoperation type comparatorDefaultBody --class ~.app.shared.singx.IndividualRegDetail
+
+methodoperation type getPrimayDisplay --class ~.app.shared.singx.IndividualRegDetail
+
+methodoperation type toString --class ~.app.shared.singx.IndividualRegDetail
+
+methodoperation type hashCode --class ~.app.shared.singx.IndividualRegDetail --primaryClass true
+
+methodoperation type equals --class ~.app.shared.singx.IndividualRegDetail --primaryClass true
+
+class --abstract true --class ~.app.server.service.IndividualRegDetailService
+
+buzzorclass add --className ~.app.server.service.IndividualRegDetailServiceImpl  --extends singx.app.server.service.IndividualRegDetailService --value_type string --annotation org.springframework.web.bind.annotation.RestController
+
+Class createAnnotation --toClass ~.app.server.service.IndividualRegDetailServiceImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.service.IndividualRegDetailService --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for IndividualRegDetail Transaction table.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$MEDIUM#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.service.IndividualRegDetailServiceImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for IndividualRegDetail Transaction table.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$MEDIUM#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+interfacebuzzor add --InterfaceName ~.app.server.repository.IndividualRegDetailRepository --genericType T --extends com.athena.server.repository.SearchInterface
+
+buzzorclass add --className ~.app.server.repository.IndividualRegDetailRepositoryImpl --implements --extends com.athena.server.repository.SearchInterfaceImpl --value_type string --implementsGenericType singx.app.server.repository.IndividualRegDetailRepository#singx.app.shared.singx.IndividualRegDetail --annotation org.springframework.stereotype.Repository
+
+Class createAnnotation --toClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.repository.IndividualRegDetailRepository --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for IndividualRegDetail Transaction table.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$MEDIUM#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for IndividualRegDetail Transaction table.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$MEDIUM#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+buzzorfield create --type ~.app.server.repository.IndividualRegDetailRepositoryImpl --field_name emfResource --dataType com.athena.config.server.helper.ResourceFactoryManagerHelper --Modifier private --annotation org.springframework.beans.factory.annotation.Autowired
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.IndividualRegDetail --readOnly false --controllerClass ~.app.server.service.IndividualRegDetailService  --controllerImplClass ~.app.server.service.IndividualRegDetailServiceImpl --repositoryClass ~.app.server.repository.IndividualRegDetailRepository --repositoryImplClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --methodType findAll --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.IndividualRegDetailBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.IndividualRegDetail --readOnly false --controllerClass ~.app.server.service.IndividualRegDetailService  --controllerImplClass ~.app.server.service.IndividualRegDetailServiceImpl --repositoryClass ~.app.server.repository.IndividualRegDetailRepository --repositoryImplClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --methodType show --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.IndividualRegDetailBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.IndividualRegDetail --readOnly false --controllerClass ~.app.server.service.IndividualRegDetailService  --controllerImplClass ~.app.server.service.IndividualRegDetailServiceImpl --repositoryClass ~.app.server.repository.IndividualRegDetailRepository --repositoryImplClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --methodType save --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.IndividualRegDetailBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.IndividualRegDetail --readOnly false --controllerClass ~.app.server.service.IndividualRegDetailService  --controllerImplClass ~.app.server.service.IndividualRegDetailServiceImpl --repositoryClass ~.app.server.repository.IndividualRegDetailRepository --repositoryImplClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --methodType delete --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.IndividualRegDetailBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.IndividualRegDetail --readOnly false --controllerClass ~.app.server.service.IndividualRegDetailService  --controllerImplClass ~.app.server.service.IndividualRegDetailServiceImpl --repositoryClass ~.app.server.repository.IndividualRegDetailRepository --repositoryImplClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --methodType update --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.IndividualRegDetailBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.IndividualRegDetail --readOnly false --controllerClass ~.app.server.service.IndividualRegDetailService  --controllerImplClass ~.app.server.service.IndividualRegDetailServiceImpl --repositoryClass ~.app.server.repository.IndividualRegDetailRepository --repositoryImplClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --methodType search --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.IndividualRegDetailBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type BusinessService --sevicePath ~.app.server.service.IndividualRegDetailServiceImpl --fieldName customerId,residenceTypeId --fieldType String,String
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.IndividualRegDetail --queryName IndividualRegDetail.DefaultFinders --queryValue "select e from IndividualRegDetail e where e.systemInfo.activeStatus=1 and e.customerId LIKE :customerId and e.residenceTypeId LIKE :residenceTypeId"
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.IndividualRegDetail --queryName IndividualRegDetail.findByCustomerId --queryValue "select e from IndividualRegDetail e where e.systemInfo.activeStatus=1 and e.customerId=:customerId"
+
+methodoperation type namedQueryMethod --queryName IndividualRegDetail.findByCustomerId --qvalue "select e from IndividualRegDetail e where e.systemInfo.activeStatus=1 and e.customerId=:customerId" --qarameteres customerId --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.IndividualRegDetail --controllerClass ~.app.server.service.IndividualRegDetailService --controllerImplClass ~.app.server.service.IndividualRegDetailServiceImpl --repositoryClass ~.app.server.repository.IndividualRegDetailRepository --repositoryImplClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --businessServiceClass ~.app.server.businessservice.IndividualRegDetailbzService --returnType java.util.List<singx.app.shared.singx.IndividualRegDetail> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.SingXCustomer
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.IndividualRegDetail --queryName IndividualRegDetail.findByResidenceTypeId --queryValue "select e from IndividualRegDetail e where e.systemInfo.activeStatus=1 and e.residenceTypeId=:residenceTypeId"
+
+methodoperation type namedQueryMethod --queryName IndividualRegDetail.findByResidenceTypeId --qvalue "select e from IndividualRegDetail e where e.systemInfo.activeStatus=1 and e.residenceTypeId=:residenceTypeId" --qarameteres residenceTypeId --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.IndividualRegDetail --controllerClass ~.app.server.service.IndividualRegDetailService --controllerImplClass ~.app.server.service.IndividualRegDetailServiceImpl --repositoryClass ~.app.server.repository.IndividualRegDetailRepository --repositoryImplClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --businessServiceClass ~.app.server.businessservice.IndividualRegDetailbzService --returnType java.util.List<singx.app.shared.singx.IndividualRegDetail> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.ResidenceType
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.IndividualRegDetail --queryName IndividualRegDetail.findByDocumentId --queryValue "select e from IndividualRegDetail e where e.systemInfo.activeStatus=1 and e.documentId=:documentId"
+
+methodoperation type namedQueryMethod --queryName IndividualRegDetail.findByDocumentId --qvalue "select e from IndividualRegDetail e where e.systemInfo.activeStatus=1 and e.documentId=:documentId" --qarameteres documentId --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.IndividualRegDetail --controllerClass ~.app.server.service.IndividualRegDetailService --controllerImplClass ~.app.server.service.IndividualRegDetailServiceImpl --repositoryClass ~.app.server.repository.IndividualRegDetailRepository --repositoryImplClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --businessServiceClass ~.app.server.businessservice.IndividualRegDetailbzService --returnType java.util.List<singx.app.shared.singx.IndividualRegDetail> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.CfgDocIndividual
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.IndividualRegDetail --queryName IndividualRegDetail.findById --queryValue "select e from IndividualRegDetail e where e.systemInfo.activeStatus=1 and  e.mapId =:mapId"
+
+methodoperation type namedQueryMethod --queryName IndividualRegDetail.findById --qvalue "select e from IndividualRegDetail e where e.systemInfo.activeStatus=1 and  e.mapId =:mapId" --qarameteres mapId --typeOfParameteres String --entityName ~.app.shared.singx.IndividualRegDetail --controllerClass ~.app.server.service.IndividualRegDetailService --controllerImplClass ~.app.server.service.IndividualRegDetailServiceImpl --repositoryClass ~.app.server.repository.IndividualRegDetailRepository --repositoryImplClass ~.app.server.repository.IndividualRegDetailRepositoryImpl --businessServiceClass ~.app.server.businessservice.IndividualRegDetailbzService --returnType singx.app.shared.singx.IndividualRegDetail --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.IndividualRegDetail
+
+buzzproperties codeStatus --PropertyFileName status --key IndividualRegDetail --value 0
+
+
+
+buzzorclass add --className IndividualRegDetailTestCase  --srcPath test
+Class createAnnotation --toClass IndividualRegDetailTestCase --annotation org.junit.runner.RunWith --key value.org.junit.runner.RunWith --value org.springframework.test.context.junit4.SpringJUnit4ClassRunner --value_type javaClass
+Class createAnnotation --toClass IndividualRegDetailTestCase --annotation org.springframework.test.context.web.WebAppConfiguration --key null.org.springframework.test.context.web.WebAppConfiguration --value null --value_type null
+Class createAnnotation --toClass IndividualRegDetailTestCase --annotation org.springframework.test.context.ContextConfiguration --key classes.org.springframework.test.context.ContextConfiguration --value singx.app.config.WebConfigExtended --value_type javaClass
+Class createAnnotation --toClass IndividualRegDetailTestCase --annotation org.junit.FixMethodOrder --key value.org.junit.FixMethodOrder.org.junit.FixMethodOrder --value org.junit.runners.MethodSorters$NAME_ASCENDING#org.junit.FixMethodOrder --value_type javatype
+ArrayAnnotation create --type IndividualRegDetailTestCase --key value --varaiable_name "" --value org.springframework.test.context.support.DependencyInjectionTestExecutionListener,org.springframework.test.context.support.DirtiesContextTestExecutionListener,org.springframework.test.context.transaction.TransactionalTestExecutionListener --valueType javatype,javatype,javatype --annotation org.springframework.test.context.TestExecutionListeners --addTo class
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name individualregdetailRepository --dataType singx.app.server.repository.IndividualRegDetailRepository<singx.app.shared.singx.IndividualRegDetail> --Modifier private --valueType 
+
+fieldAnnotation create --type IndividualRegDetailTestCase --field_name individualregdetailRepository --valueType singx.app.server.repository.IndividualRegDetailRepository --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name runtimeLogInfoHelper --dataType com.athena.framework.server.helper.RuntimeLogInfoHelper --Modifier private --valueType 
+
+fieldAnnotation create --type IndividualRegDetailTestCase --field_name runtimeLogInfoHelper --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --valueType 
+
+fieldAnnotation create --type IndividualRegDetailTestCase --field_name entityValidator --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper<Object> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name valueGenerator --dataType com.athena.framework.server.test.RandomValueGenerator --Modifier private --initializer "new com.athena.framework.server.test.RandomValueGenerator()"
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name map --dataType java.util.HashMap<String,Object> --Modifier private --initializer "new HashMap<String,Object>()" --isStatic true
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name methodCallStack --dataType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --Modifier private --valueType 
+
+fieldAnnotation create --type IndividualRegDetailTestCase --field_name methodCallStack --valueType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name session --dataType org.springframework.mock.web.MockHttpSession --Modifier protected --valueType javaType
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name request --dataType org.springframework.mock.web.MockHttpServletRequest --Modifier protected --valueType javaType
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name response --dataType org.springframework.mock.web.MockHttpServletResponse --Modifier protected --valueType javaType
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name startSession --modifier protected --return_type void --method_body "session = new MockHttpSession();"
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name endSession --modifier protected --return_type void --method_body "session.clearAttributes(); session.invalidate(); session = null;"
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name startRequest --modifier protected --return_type void --method_body "request = new MockHttpServletRequest(); request.setSession(session); org.springframework.web.context.request.RequestContextHolder.setRequestAttributes(new org.springframework.web.context.request.ServletRequestAttributes(request));"
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name endRequest --modifier protected --return_type void --method_body "((org.springframework.web.context.request.ServletRequestAttributes) org.springframework.web.context.request.RequestContextHolder.getRequestAttributes()).requestCompleted(); org.springframework.web.context.request.RequestContextHolder.resetRequestAttributes(); request = null;"
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name before --modifier public --return_type void --method_body "startSession(); startRequest(); setBeans();" --annotation org.junit.Before --key "" --value ""
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name after --modifier public --return_type void --method_body "endSession(); endRequest();" --annotation org.junit.After --key "" --value ""
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name setBeans --modifier private --return_type void --method_body "runtimeLogInfoHelper.createRuntimeLogUserInfo(1, "AAAAA", request.getRemoteHost());   org.junit.Assert.assertNotNull(runtimeLogInfoHelper);methodCallStack.setRequestId(java.util.UUID.randomUUID().toString().toUpperCase()); "
+ Import add --toClass IndividualRegDetailTestCase --importType singx.app.shared.singx.IndividualRegDetail
+ Import add --toClass IndividualRegDetailTestCase --importType com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface.RECORD_TYPE
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name test1Save --modifier public --return_type void --method_body " try { SingXCustomer singxcustomer=new SingXCustomer();singxcustomer.setCountryId("3uTlN5zgNBV7sWlymqa7S7Xh2Gh0H65N6uNIafkMkA3bTZZdXs"); singxcustomer.setCustomerTypeId("3WvGtgDPeOFMLchvnlClRYlulLyjxz71SvglUqg9vvbk1nH3OQ"); singxcustomer.setEmailId("uZBk626L7Ldhce3wrs0lSiDDrWpfJbnZDHOSKqCpt6fZYD7vJO"); SingXCustomer SingXCustomerTest =singxcustomerRepository.save(singxcustomer);map.put("SingXCustomerPrimaryKey", singxcustomer._getPrimarykey());CfgDocIndividual cfgdocindividual=new CfgDocIndividual();Country country=new Country();country.setCapital("zBDY8NjaB5LpS4L9X50mk5tPjMFg9MbU"); country.setCapitalLatitude(4); country.setCapitalLongitude(11); country.setCountryCode1("JdS"); country.setCountryCode2("UOt"); country.setCountryFlag("mC3uZW22TgQxGdUUTEVJAvia3nbBKJuJ2jvvYx9VPGvumXJGBH"); country.setCountryName("KHQnD9dQAcxod3BxGQHamVVMExAMlZaAbFNAlvKc0SvNKRaS7q"); country.setCurrencyCode("N8f"); country.setCurrencyName("suqfuiCHonVsXzghUQoFYlp890LacycjWJs00cLzVI3UYaUeso"); country.setCurrencySymbol("agPa5tG584gEROZwE55bx1eJqsrCbRUW"); country.setIsoNumeric(8); Country CountryTest =countryRepository.save(country);map.put("CountryPrimaryKey", country._getPrimarykey());ResidenceType residencetype=new ResidenceType();residencetype.setCountryId((java.lang.String)CountryTest._getPrimarykey()); /* ******Adding refrenced table data */residencetype.setResidenceTypeName("kzkgCfoxw836BMCiNoQsbcUbBmgDlXNW4e3dOwZMMiw0m38Skq"); ResidenceType ResidenceTypeTest =residencetypeRepository.save(residencetype);map.put("ResidenceTypePrimaryKey", residencetype._getPrimarykey());cfgdocindividual.setCountryId((java.lang.String)CountryTest._getPrimarykey()); /* ******Adding refrenced table data */cfgdocindividual.setDisplaySeq(2147483647); cfgdocindividual.setDocumentName("EUz6j8sFAOxwdqfpqKOxUINeSWJVKesIhblccJxvv0Bf38VXtI"); cfgdocindividual.setIsExpiryDateReqd(true); cfgdocindividual.setIsIssueDateReqd(true); cfgdocindividual.setIsMandatory(true); cfgdocindividual.setIsReferenceNoReqd(true); cfgdocindividual.setMaxSize(2147483647); cfgdocindividual.setRemarks("Mtu0cqGN1IHmHHhpW6bXzs5hKiqTTEE9HSVhFESJdEVBynnWrp"); cfgdocindividual.setResidenceTypeId((java.lang.String)ResidenceTypeTest._getPrimarykey()); /* ******Adding refrenced table data */CfgDocIndividual CfgDocIndividualTest =cfgdocindividualRepository.save(cfgdocindividual);map.put("CfgDocIndividualPrimaryKey", cfgdocindividual._getPrimarykey());IndividualRegDetail individualregdetail=new IndividualRegDetail();individualregdetail.setCustomerId((java.lang.String)SingXCustomerTest._getPrimarykey()); /* ******Adding refrenced table data */individualregdetail.setDocumentId((java.lang.String)CfgDocIndividualTest._getPrimarykey()); /* ******Adding refrenced table data */individualregdetail.setExpiryDate(new java.sql.Date(123456789)); individualregdetail.setIdProofValue("xWbht9DFhwB8VNoGQgiAuUBokZNlwLzyDdIwTmuzwWub7elanh"); individualregdetail.setNationalityId("8tBQtB3lemNB4T47RcPQxwhdwfgurFCuX2BuNNfQ4xo0HV8QM3"); individualregdetail.setResidenceTypeId((java.lang.String)ResidenceTypeTest._getPrimarykey()); /* ******Adding refrenced table data */individualregdetail.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);individualregdetail.setEntityValidator(entityValidator);individualregdetail.isValid();individualregdetailRepository.save(individualregdetail); map.put("IndividualRegDetailPrimaryKey", individualregdetail._getPrimarykey());} catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {org.junit.Assert.fail(e.getMessage()); }  catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+ Import add --toClass IndividualRegDetailTestCase --importType singx.app.shared.singx.SingXCustomer
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name singxcustomerRepository --dataType singx.app.server.repository.SingXCustomerRepository<singx.app.shared.singx.SingXCustomer> --Modifier private --valueType 
+
+fieldAnnotation create --type IndividualRegDetailTestCase --field_name singxcustomerRepository --valueType singx.app.server.repository.SingXCustomerRepository<singx.app.shared.singx.SingXCustomer> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+ Import add --toClass IndividualRegDetailTestCase --importType singx.app.shared.singx.CfgDocIndividual
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name cfgdocindividualRepository --dataType singx.app.server.repository.CfgDocIndividualRepository<singx.app.shared.singx.CfgDocIndividual> --Modifier private --valueType 
+
+fieldAnnotation create --type IndividualRegDetailTestCase --field_name cfgdocindividualRepository --valueType singx.app.server.repository.CfgDocIndividualRepository<singx.app.shared.singx.CfgDocIndividual> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+ Import add --toClass IndividualRegDetailTestCase --importType singx.app.shared.location.Country
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name countryRepository --dataType singx.app.server.repository.CountryRepository<singx.app.shared.location.Country> --Modifier private --valueType 
+
+fieldAnnotation create --type IndividualRegDetailTestCase --field_name countryRepository --valueType singx.app.server.repository.CountryRepository<singx.app.shared.location.Country> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+ Import add --toClass IndividualRegDetailTestCase --importType singx.app.shared.singx.ResidenceType
+
+buzzorfield create --type IndividualRegDetailTestCase --field_name residencetypeRepository --dataType singx.app.server.repository.ResidenceTypeRepository<singx.app.shared.singx.ResidenceType> --Modifier private --valueType 
+
+fieldAnnotation create --type IndividualRegDetailTestCase --field_name residencetypeRepository --valueType singx.app.server.repository.ResidenceTypeRepository<singx.app.shared.singx.ResidenceType> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+ Import add --toClass IndividualRegDetailTestCase --importType singx.app.shared.location.Country
+ Import add --toClass IndividualRegDetailTestCase --importType singx.app.shared.singx.ResidenceType
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name test2Update --modifier public --return_type void --method_body " try { org.junit.Assert.assertNotNull(map.get("IndividualRegDetailPrimaryKey"));IndividualRegDetail individualregdetail=individualregdetailRepository.findById((java.lang.String)map.get("IndividualRegDetailPrimaryKey"));individualregdetail.setExpiryDate(new java.sql.Date(123456789));individualregdetail.setIdProofValue("25tyffDY5qAEPeJ1PqgeefZ3CHxTCDzb7UukDltvFwKigBqqA3");individualregdetail.setNationalityId("5ns8qQbfX54LYKYHWhBWGMNjkAGrZzLMuVPxrYu2xwOah8mvSM");individualregdetail.setVersionId(1);individualregdetail.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);individualregdetailRepository.update(individualregdetail);} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name test3findBycustomerId --modifier public --return_type void --method_body " try {java.util.List<IndividualRegDetail> listofcustomerId=individualregdetailRepository.findByCustomerId((java.lang.String)map.get("SingXCustomerPrimaryKey"));if(listofcustomerId.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name test3findBydocumentId --modifier public --return_type void --method_body " try {java.util.List<IndividualRegDetail> listofdocumentId=individualregdetailRepository.findByDocumentId((java.lang.String)map.get("CfgDocIndividualPrimaryKey"));if(listofdocumentId.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name test3FindById --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("IndividualRegDetailPrimaryKey"));individualregdetailRepository.findById((java.lang.String)map.get("IndividualRegDetailPrimaryKey"));} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name test3findByresidenceTypeId --modifier public --return_type void --method_body " try {java.util.List<IndividualRegDetail> listofresidenceTypeId=individualregdetailRepository.findByResidenceTypeId((java.lang.String)map.get("ResidenceTypePrimaryKey"));if(listofresidenceTypeId.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass IndividualRegDetailTestCase --method_name test4Delete --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("IndividualRegDetailPrimaryKey"));individualregdetailRepository.delete((java.lang.String)map.get("IndividualRegDetailPrimaryKey"));/* Deleting refrenced data */cfgdocindividualRepository.delete((java.lang.String)map.get("CfgDocIndividualPrimaryKey"));/* Deleting refrenced data */residencetypeRepository.delete((java.lang.String)map.get("ResidenceTypePrimaryKey"));/* Deleting refrenced data */countryRepository.delete((java.lang.String)map.get("CountryPrimaryKey"));/* Deleting refrenced data */singxcustomerRepository.delete((java.lang.String)map.get("SingXCustomerPrimaryKey"));/* Deleting refrenced data */} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+
+
+
+
+quit

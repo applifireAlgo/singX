@@ -1,0 +1,388 @@
+
+
+
+
+ development mode --enabled true 
+
+
+
+buzzproperties codeStatus --PropertyFileName status --key BankBranch --value 1
+
+// Entity Creation 
+
+buzzorclass add --className ~.app.shared.singx.BankBranch --implements java.io.Serializable,com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface --implementsGenericType java.util.Comparator#singx.app.shared.singx.BankBranch --annotation javax.persistence.Table,javax.persistence.Entity --key type.org.eclipse.persistence.annotations.Cache,size.org.eclipse.persistence.annotations.Cache,expiry.org.eclipse.persistence.annotations.Cache,alwaysRefresh.org.eclipse.persistence.annotations.Cache,disableHits.org.eclipse.persistence.annotations.Cache,name.javax.persistence.Table,createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value org.eclipse.persistence.annotations.CacheType$CACHE#org.eclipse.persistence.annotations.CacheType,64000.org.eclipse.persistence.annotations.Cache,0.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,ast_BankBranch_M.javax.persistence.Table,john.doe.com.athena.annotation.SourceCodeAuthorClass,.com.athena.annotation.SourceCodeAuthorClass,1.com.athena.annotation.SourceCodeAuthorClass,BankBranch.com.athena.annotation.SourceCodeAuthorClass,com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity --value_type javaType,Integer,Integer,Boolean,Boolean,String,String,String,String,String,javaType
+
+Persistent add entity --entityName singx.app.shared.singx.BankBranch
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name branchName --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value branchName.com.fasterxml.jackson.annotation.JsonProperty,branchName.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.BankBranch --field_name branchName --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.BankBranch --field_name branchName --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#50
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name branchCode --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value branchCode.com.fasterxml.jackson.annotation.JsonProperty,branchCode.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.BankBranch --field_name branchCode --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.BankBranch --field_name branchCode --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#50
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name primaryKey --dataType java.lang.String --Modifier private --annotation javax.persistence.Transient
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name branchId --dataType java.lang.String --Modifier private --valueType String,String,String --annotation javax.persistence.Id,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty,javax.persistence.GeneratedValue --key value.com.fasterxml.jackson.annotation.JsonProperty,generator.javax.persistence.GeneratedValue,name.javax.persistence.Column --value branchId.com.fasterxml.jackson.annotation.JsonProperty,UUIDGenerator.javax.persistence.GeneratedValue,branchId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name bankId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value bankId.com.fasterxml.jackson.annotation.JsonProperty,bankId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name countryId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value countryId.com.fasterxml.jackson.annotation.JsonProperty,countryId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --annotation javax.persistence.Transient,com.fasterxml.jackson.annotation.JsonIgnore
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name versionId --dataType Integer --Modifier private --annotation javax.persistence.Version,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key name.javax.persistence.Column,value.com.fasterxml.jackson.annotation.JsonProperty --value versionId.javax.persistence.Column,versionId.com.fasterxml.jackson.annotation.JsonProperty --valueType String,String
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name entityAudit --dataType singx.app.shared.EntityAudit --Modifier private --annotation javax.persistence.Embedded,com.fasterxml.jackson.annotation.JsonIgnore --initializer "new EntityAudit()"
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name systemInfo --dataType singx.app.shared.SystemInfo --Modifier private --annotation javax.persistence.Embedded --initializer "new SystemInfo()"
+
+buzzorfield create --type ~.app.shared.singx.BankBranch --field_name primaryDisplay --dataType String --Modifier private --annotation javax.persistence.Transient
+
+methodoperation type getSetMethod --class ~.app.shared.singx.BankBranch --variableName branchName --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.BankBranch --variableName branchCode --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.BankBranch --variableName primaryKey --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.BankBranch --variableName branchId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.BankBranch --variableName bankId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.BankBranch --variableName countryId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.BankBranch --variableName versionId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.BankBranch --variableName primaryDisplay --getterMethod false --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.BankBranch --variableName systemInfo --getterMethod true --setterMethod true
+
+methodoperation type hardDelete --entityName ~.app.shared.singx.BankBranch
+
+methodoperation type setValidator --class ~.app.shared.singx.BankBranch
+
+methodoperation type setLoggedUserInfo --class ~.app.shared.singx.BankBranch --updateFieldName updatedBy --createFieldName createdBy --activeFieldName activeStatus --isAggregate false
+
+methodoperation type comparatorDefaultBody --class ~.app.shared.singx.BankBranch
+
+methodoperation type getPrimayDisplay --class ~.app.shared.singx.BankBranch --variableName branchName
+
+methodoperation type toString --class ~.app.shared.singx.BankBranch
+
+methodoperation type hashCode --class ~.app.shared.singx.BankBranch --primaryClass true
+
+methodoperation type equals --class ~.app.shared.singx.BankBranch --primaryClass true
+
+class --abstract true --class ~.app.server.service.BankBranchService
+
+buzzorclass add --className ~.app.server.service.BankBranchServiceImpl  --extends singx.app.server.service.BankBranchService --value_type string --annotation org.springframework.web.bind.annotation.RestController
+
+Class createAnnotation --toClass ~.app.server.service.BankBranchServiceImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.service.BankBranchService --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for BankBranch Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.service.BankBranchServiceImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for BankBranch Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+interfacebuzzor add --InterfaceName ~.app.server.repository.BankBranchRepository --genericType T --extends com.athena.server.repository.SearchInterface
+
+buzzorclass add --className ~.app.server.repository.BankBranchRepositoryImpl --implements --extends com.athena.server.repository.SearchInterfaceImpl --value_type string --implementsGenericType singx.app.server.repository.BankBranchRepository#singx.app.shared.singx.BankBranch --annotation org.springframework.stereotype.Repository
+
+Class createAnnotation --toClass ~.app.server.repository.BankBranchRepositoryImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.repository.BankBranchRepository --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for BankBranch Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.repository.BankBranchRepositoryImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for BankBranch Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+buzzorfield create --type ~.app.server.repository.BankBranchRepositoryImpl --field_name emfResource --dataType com.athena.config.server.helper.ResourceFactoryManagerHelper --Modifier private --annotation org.springframework.beans.factory.annotation.Autowired
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.BankBranch --readOnly false --controllerClass ~.app.server.service.BankBranchService  --controllerImplClass ~.app.server.service.BankBranchServiceImpl --repositoryClass ~.app.server.repository.BankBranchRepository --repositoryImplClass ~.app.server.repository.BankBranchRepositoryImpl --methodType findAll --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.BankBranchBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.BankBranch --readOnly false --controllerClass ~.app.server.service.BankBranchService  --controllerImplClass ~.app.server.service.BankBranchServiceImpl --repositoryClass ~.app.server.repository.BankBranchRepository --repositoryImplClass ~.app.server.repository.BankBranchRepositoryImpl --methodType show --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.BankBranchBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.BankBranch --readOnly false --controllerClass ~.app.server.service.BankBranchService  --controllerImplClass ~.app.server.service.BankBranchServiceImpl --repositoryClass ~.app.server.repository.BankBranchRepository --repositoryImplClass ~.app.server.repository.BankBranchRepositoryImpl --methodType save --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.BankBranchBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.BankBranch --readOnly false --controllerClass ~.app.server.service.BankBranchService  --controllerImplClass ~.app.server.service.BankBranchServiceImpl --repositoryClass ~.app.server.repository.BankBranchRepository --repositoryImplClass ~.app.server.repository.BankBranchRepositoryImpl --methodType delete --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.BankBranchBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.BankBranch --readOnly false --controllerClass ~.app.server.service.BankBranchService  --controllerImplClass ~.app.server.service.BankBranchServiceImpl --repositoryClass ~.app.server.repository.BankBranchRepository --repositoryImplClass ~.app.server.repository.BankBranchRepositoryImpl --methodType update --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.BankBranchBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.BankBranch --readOnly false --controllerClass ~.app.server.service.BankBranchService  --controllerImplClass ~.app.server.service.BankBranchServiceImpl --repositoryClass ~.app.server.repository.BankBranchRepository --repositoryImplClass ~.app.server.repository.BankBranchRepositoryImpl --methodType search --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.BankBranchBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type BusinessService --sevicePath ~.app.server.service.BankBranchServiceImpl --fieldName bankId,branchCode,branchId,countryId --fieldType String,String,String,String
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.BankBranch --queryName BankBranch.DefaultFinders --queryValue "select e from BankBranch e where e.systemInfo.activeStatus=1 and e.branchId LIKE :branchId and e.branchCode LIKE :branchCode and e.bankId LIKE :bankId and e.countryId LIKE :countryId"
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.BankBranch --queryName BankBranch.findByBankId --queryValue "select e from BankBranch e where e.systemInfo.activeStatus=1 and e.bankId=:bankId"
+
+methodoperation type namedQueryMethod --queryName BankBranch.findByBankId --qvalue "select e from BankBranch e where e.systemInfo.activeStatus=1 and e.bankId=:bankId" --qarameteres bankId --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.BankBranch --controllerClass ~.app.server.service.BankBranchService --controllerImplClass ~.app.server.service.BankBranchServiceImpl --repositoryClass ~.app.server.repository.BankBranchRepository --repositoryImplClass ~.app.server.repository.BankBranchRepositoryImpl --businessServiceClass ~.app.server.businessservice.BankBranchbzService --returnType java.util.List<singx.app.shared.singx.BankBranch> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.Bank
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.BankBranch --queryName BankBranch.findByCountryId --queryValue "select e from BankBranch e where e.systemInfo.activeStatus=1 and e.countryId=:countryId"
+
+methodoperation type namedQueryMethod --queryName BankBranch.findByCountryId --qvalue "select e from BankBranch e where e.systemInfo.activeStatus=1 and e.countryId=:countryId" --qarameteres countryId --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.BankBranch --controllerClass ~.app.server.service.BankBranchService --controllerImplClass ~.app.server.service.BankBranchServiceImpl --repositoryClass ~.app.server.repository.BankBranchRepository --repositoryImplClass ~.app.server.repository.BankBranchRepositoryImpl --businessServiceClass ~.app.server.businessservice.BankBranchbzService --returnType java.util.List<singx.app.shared.singx.BankBranch> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.Country
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.BankBranch --queryName BankBranch.findById --queryValue "select e from BankBranch e where e.systemInfo.activeStatus=1 and  e.branchId =:branchId"
+
+methodoperation type namedQueryMethod --queryName BankBranch.findById --qvalue "select e from BankBranch e where e.systemInfo.activeStatus=1 and  e.branchId =:branchId" --qarameteres branchId --typeOfParameteres String --entityName ~.app.shared.singx.BankBranch --controllerClass ~.app.server.service.BankBranchService --controllerImplClass ~.app.server.service.BankBranchServiceImpl --repositoryClass ~.app.server.repository.BankBranchRepository --repositoryImplClass ~.app.server.repository.BankBranchRepositoryImpl --businessServiceClass ~.app.server.businessservice.BankBranchbzService --returnType singx.app.shared.singx.BankBranch --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.BankBranch
+
+buzzproperties codeStatus --PropertyFileName status --key BankBranch --value 0
+
+
+
+buzzorclass add --className BankBranchTestCase  --srcPath test
+Class createAnnotation --toClass BankBranchTestCase --annotation org.junit.runner.RunWith --key value.org.junit.runner.RunWith --value org.springframework.test.context.junit4.SpringJUnit4ClassRunner --value_type javaClass
+Class createAnnotation --toClass BankBranchTestCase --annotation org.springframework.test.context.web.WebAppConfiguration --key null.org.springframework.test.context.web.WebAppConfiguration --value null --value_type null
+Class createAnnotation --toClass BankBranchTestCase --annotation org.springframework.test.context.ContextConfiguration --key classes.org.springframework.test.context.ContextConfiguration --value singx.app.config.WebConfigExtended --value_type javaClass
+Class createAnnotation --toClass BankBranchTestCase --annotation org.junit.FixMethodOrder --key value.org.junit.FixMethodOrder.org.junit.FixMethodOrder --value org.junit.runners.MethodSorters$NAME_ASCENDING#org.junit.FixMethodOrder --value_type javatype
+ArrayAnnotation create --type BankBranchTestCase --key value --varaiable_name "" --value org.springframework.test.context.support.DependencyInjectionTestExecutionListener,org.springframework.test.context.support.DirtiesContextTestExecutionListener,org.springframework.test.context.transaction.TransactionalTestExecutionListener --valueType javatype,javatype,javatype --annotation org.springframework.test.context.TestExecutionListeners --addTo class
+
+buzzorfield create --type BankBranchTestCase --field_name bankbranchRepository --dataType singx.app.server.repository.BankBranchRepository<singx.app.shared.singx.BankBranch> --Modifier private --valueType 
+
+fieldAnnotation create --type BankBranchTestCase --field_name bankbranchRepository --valueType singx.app.server.repository.BankBranchRepository --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type BankBranchTestCase --field_name runtimeLogInfoHelper --dataType com.athena.framework.server.helper.RuntimeLogInfoHelper --Modifier private --valueType 
+
+fieldAnnotation create --type BankBranchTestCase --field_name runtimeLogInfoHelper --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type BankBranchTestCase --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --valueType 
+
+fieldAnnotation create --type BankBranchTestCase --field_name entityValidator --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper<Object> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type BankBranchTestCase --field_name valueGenerator --dataType com.athena.framework.server.test.RandomValueGenerator --Modifier private --initializer "new com.athena.framework.server.test.RandomValueGenerator()"
+
+buzzorfield create --type BankBranchTestCase --field_name map --dataType java.util.HashMap<String,Object> --Modifier private --initializer "new HashMap<String,Object>()" --isStatic true
+
+buzzorfield create --type BankBranchTestCase --field_name methodCallStack --dataType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --Modifier private --valueType 
+
+fieldAnnotation create --type BankBranchTestCase --field_name methodCallStack --valueType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type BankBranchTestCase --field_name session --dataType org.springframework.mock.web.MockHttpSession --Modifier protected --valueType javaType
+
+buzzorfield create --type BankBranchTestCase --field_name request --dataType org.springframework.mock.web.MockHttpServletRequest --Modifier protected --valueType javaType
+
+buzzorfield create --type BankBranchTestCase --field_name response --dataType org.springframework.mock.web.MockHttpServletResponse --Modifier protected --valueType javaType
+
+buzzormethod add --toClass BankBranchTestCase --method_name startSession --modifier protected --return_type void --method_body "session = new MockHttpSession();"
+
+buzzormethod add --toClass BankBranchTestCase --method_name endSession --modifier protected --return_type void --method_body "session.clearAttributes(); session.invalidate(); session = null;"
+
+buzzormethod add --toClass BankBranchTestCase --method_name startRequest --modifier protected --return_type void --method_body "request = new MockHttpServletRequest(); request.setSession(session); org.springframework.web.context.request.RequestContextHolder.setRequestAttributes(new org.springframework.web.context.request.ServletRequestAttributes(request));"
+
+buzzormethod add --toClass BankBranchTestCase --method_name endRequest --modifier protected --return_type void --method_body "((org.springframework.web.context.request.ServletRequestAttributes) org.springframework.web.context.request.RequestContextHolder.getRequestAttributes()).requestCompleted(); org.springframework.web.context.request.RequestContextHolder.resetRequestAttributes(); request = null;"
+
+buzzormethod add --toClass BankBranchTestCase --method_name before --modifier public --return_type void --method_body "startSession(); startRequest(); setBeans();" --annotation org.junit.Before --key "" --value ""
+
+buzzormethod add --toClass BankBranchTestCase --method_name after --modifier public --return_type void --method_body "endSession(); endRequest();" --annotation org.junit.After --key "" --value ""
+
+buzzormethod add --toClass BankBranchTestCase --method_name setBeans --modifier private --return_type void --method_body "runtimeLogInfoHelper.createRuntimeLogUserInfo(1, "AAAAA", request.getRemoteHost());   org.junit.Assert.assertNotNull(runtimeLogInfoHelper);methodCallStack.setRequestId(java.util.UUID.randomUUID().toString().toUpperCase()); "
+ Import add --toClass BankBranchTestCase --importType singx.app.shared.singx.BankBranch
+ Import add --toClass BankBranchTestCase --importType com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface.RECORD_TYPE
+
+buzzormethod add --toClass BankBranchTestCase --method_name test1Save --modifier public --return_type void --method_body " try { Bank bank=new Bank();bank.setBankCode("GMivI85KKb"); bank.setBankName("ALh6uMfKtVW1mot72Zvr7TEf51lXqOIWBv67xi9SGtkekPMKYr"); Country country=new Country();country.setCapital("fU22p2dm5CH5nWDPRHOTQXOdge0bSi7I"); country.setCapitalLatitude(5); country.setCapitalLongitude(6); country.setCountryCode1("HvR"); country.setCountryCode2("vyl"); country.setCountryFlag("3NBDzgtjpoVbhadEVMfM5E6AO6Qgbj3T4Rx59SsgKinEBdPVSk"); country.setCountryName("2ObKF0iI0wNqTB7BMILRMO5pnL7S4HvGxE3GZ6snH3yMbF8sQU"); country.setCurrencyCode("6VG"); country.setCurrencyName("FheTmfv1jv9qkqmWquRwaxmomzmNGqdEqZHuw4F9gFBXDV8IFv"); country.setCurrencySymbol("w510XSEsDb1y2yHe7BPlDs78791Sg28T"); country.setIsoNumeric(8); Country CountryTest =countryRepository.save(country);map.put("CountryPrimaryKey", country._getPrimarykey());bank.setBankCode("spEnhNiTnY"); bank.setBankName("PBh3N9jETimmlCRiZ1qFl89ZSI9KUtwkg1Jz7xHycE5GfWdFXC"); bank.setCountryId((java.lang.String)CountryTest._getPrimarykey()); /* ******Adding refrenced table data */Bank BankTest =bankRepository.save(bank);map.put("BankPrimaryKey", bank._getPrimarykey());BankBranch bankbranch=new BankBranch();bankbranch.setBankId((java.lang.String)BankTest._getPrimarykey()); /* ******Adding refrenced table data */bankbranch.setBranchCode("lZZQbJ6P2lV7jhjmJmZLCpZxB1pIw7Yf1sKv8KmllPrnkMCSvl"); bankbranch.setBranchName("yHa9Tk5FNMAvo06eYvKsrTABpnFztShqqTnAMSEfQqzNLGoPrs"); bankbranch.setCountryId((java.lang.String)CountryTest._getPrimarykey()); /* ******Adding refrenced table data */bankbranch.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);bankbranch.setEntityValidator(entityValidator);bankbranch.isValid();bankbranchRepository.save(bankbranch); map.put("BankBranchPrimaryKey", bankbranch._getPrimarykey());} catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {org.junit.Assert.fail(e.getMessage()); }  catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+ Import add --toClass BankBranchTestCase --importType singx.app.shared.singx.Bank
+
+buzzorfield create --type BankBranchTestCase --field_name bankRepository --dataType singx.app.server.repository.BankRepository<singx.app.shared.singx.Bank> --Modifier private --valueType 
+
+fieldAnnotation create --type BankBranchTestCase --field_name bankRepository --valueType singx.app.server.repository.BankRepository<singx.app.shared.singx.Bank> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+ Import add --toClass BankBranchTestCase --importType singx.app.shared.location.Country
+
+buzzorfield create --type BankBranchTestCase --field_name countryRepository --dataType singx.app.server.repository.CountryRepository<singx.app.shared.location.Country> --Modifier private --valueType 
+
+fieldAnnotation create --type BankBranchTestCase --field_name countryRepository --valueType singx.app.server.repository.CountryRepository<singx.app.shared.location.Country> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+ Import add --toClass BankBranchTestCase --importType singx.app.shared.location.Country
+
+buzzormethod add --toClass BankBranchTestCase --method_name test2Update --modifier public --return_type void --method_body " try { org.junit.Assert.assertNotNull(map.get("BankBranchPrimaryKey"));BankBranch bankbranch=bankbranchRepository.findById((java.lang.String)map.get("BankBranchPrimaryKey"));bankbranch.setBranchCode("lsDBigLL3jQAl3uU8xDda2gCpFkReHjUdpmRK64j3D5KmJ2p6D");bankbranch.setBranchName("TpSai1V2XI0h4y7ltz0IkrqXTVEiYeBwNY1S7bOjepU80cbjYE");bankbranch.setVersionId(1);bankbranch.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);bankbranchRepository.update(bankbranch);} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass BankBranchTestCase --method_name test3findBybankId --modifier public --return_type void --method_body " try {java.util.List<BankBranch> listofbankId=bankbranchRepository.findByBankId((java.lang.String)map.get("BankPrimaryKey"));if(listofbankId.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass BankBranchTestCase --method_name test3FindById --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("BankBranchPrimaryKey"));bankbranchRepository.findById((java.lang.String)map.get("BankBranchPrimaryKey"));} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass BankBranchTestCase --method_name test3findBycountryId --modifier public --return_type void --method_body " try {java.util.List<BankBranch> listofcountryId=bankbranchRepository.findByCountryId((java.lang.String)map.get("CountryPrimaryKey"));if(listofcountryId.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass BankBranchTestCase --method_name test4Delete --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("BankBranchPrimaryKey"));bankbranchRepository.delete((java.lang.String)map.get("BankBranchPrimaryKey"));/* Deleting refrenced data */bankRepository.delete((java.lang.String)map.get("BankPrimaryKey"));/* Deleting refrenced data */countryRepository.delete((java.lang.String)map.get("CountryPrimaryKey"));/* Deleting refrenced data */} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+
+
+buzzproperties codeStatus --PropertyFileName status --key InputDataType --value 1
+
+// Entity Creation 
+
+buzzorclass add --className ~.app.shared.singx.InputDataType --implements java.io.Serializable,com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface --implementsGenericType java.util.Comparator#singx.app.shared.singx.InputDataType --annotation javax.persistence.Table,javax.persistence.Entity --key type.org.eclipse.persistence.annotations.Cache,size.org.eclipse.persistence.annotations.Cache,expiry.org.eclipse.persistence.annotations.Cache,alwaysRefresh.org.eclipse.persistence.annotations.Cache,disableHits.org.eclipse.persistence.annotations.Cache,name.javax.persistence.Table,createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value org.eclipse.persistence.annotations.CacheType$CACHE#org.eclipse.persistence.annotations.CacheType,64000.org.eclipse.persistence.annotations.Cache,0.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,ast_InputDataType_M.javax.persistence.Table,john.doe.com.athena.annotation.SourceCodeAuthorClass,.com.athena.annotation.SourceCodeAuthorClass,1.com.athena.annotation.SourceCodeAuthorClass,InputDataType.com.athena.annotation.SourceCodeAuthorClass,com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity --value_type javaType,Integer,Integer,Boolean,Boolean,String,String,String,String,String,javaType
+
+Persistent add entity --entityName singx.app.shared.singx.InputDataType
+
+buzzorfield create --type ~.app.shared.singx.InputDataType --field_name inputTypeName --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value inputTypeName.com.fasterxml.jackson.annotation.JsonProperty,inputTypeName.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.InputDataType --field_name inputTypeName --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.InputDataType --field_name inputTypeName --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.singx.InputDataType --field_name primaryKey --dataType java.lang.Integer --Modifier private --annotation javax.persistence.Transient
+
+buzzorfield create --type ~.app.shared.singx.InputDataType --field_name inputTypeId --dataType java.lang.Integer --Modifier private --valueType javatype,String,String --annotation javax.persistence.Id,javax.persistence.GeneratedValue,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key strategy.javax.persistence.GeneratedValue,value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value javax.persistence.GenerationType$IDENTITY#javax.persistence.GenerationType,inputTypeId.com.fasterxml.jackson.annotation.JsonProperty,inputTypeId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.InputDataType --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --annotation javax.persistence.Transient,com.fasterxml.jackson.annotation.JsonIgnore
+
+buzzorfield create --type ~.app.shared.singx.InputDataType --field_name versionId --dataType Integer --Modifier private --annotation javax.persistence.Version,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key name.javax.persistence.Column,value.com.fasterxml.jackson.annotation.JsonProperty --value versionId.javax.persistence.Column,versionId.com.fasterxml.jackson.annotation.JsonProperty --valueType String,String
+
+buzzorfield create --type ~.app.shared.singx.InputDataType --field_name entityAudit --dataType singx.app.shared.EntityAudit --Modifier private --annotation javax.persistence.Embedded,com.fasterxml.jackson.annotation.JsonIgnore --initializer "new EntityAudit()"
+
+buzzorfield create --type ~.app.shared.singx.InputDataType --field_name systemInfo --dataType singx.app.shared.SystemInfo --Modifier private --annotation javax.persistence.Embedded --initializer "new SystemInfo()"
+
+buzzorfield create --type ~.app.shared.singx.InputDataType --field_name primaryDisplay --dataType String --Modifier private --annotation javax.persistence.Transient
+
+methodoperation type getSetMethod --class ~.app.shared.singx.InputDataType --variableName inputTypeName --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.InputDataType --variableName primaryKey --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.InputDataType --variableName inputTypeId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.InputDataType --variableName versionId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.InputDataType --variableName primaryDisplay --getterMethod false --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.InputDataType --variableName systemInfo --getterMethod true --setterMethod true
+
+methodoperation type hardDelete --entityName ~.app.shared.singx.InputDataType
+
+methodoperation type setValidator --class ~.app.shared.singx.InputDataType
+
+methodoperation type setLoggedUserInfo --class ~.app.shared.singx.InputDataType --updateFieldName updatedBy --createFieldName createdBy --activeFieldName activeStatus --isAggregate false
+
+methodoperation type comparatorDefaultBody --class ~.app.shared.singx.InputDataType
+
+methodoperation type getPrimayDisplay --class ~.app.shared.singx.InputDataType --variableName inputTypeName
+
+methodoperation type toString --class ~.app.shared.singx.InputDataType
+
+methodoperation type hashCode --class ~.app.shared.singx.InputDataType --primaryClass true
+
+methodoperation type equals --class ~.app.shared.singx.InputDataType --primaryClass true
+
+class --abstract true --class ~.app.server.service.InputDataTypeService
+
+buzzorclass add --className ~.app.server.service.InputDataTypeServiceImpl  --extends singx.app.server.service.InputDataTypeService --value_type string --annotation org.springframework.web.bind.annotation.RestController
+
+Class createAnnotation --toClass ~.app.server.service.InputDataTypeServiceImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.service.InputDataTypeService --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for InputDataType Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.service.InputDataTypeServiceImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for InputDataType Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+interfacebuzzor add --InterfaceName ~.app.server.repository.InputDataTypeRepository --genericType T --extends com.athena.server.repository.SearchInterface
+
+buzzorclass add --className ~.app.server.repository.InputDataTypeRepositoryImpl --implements --extends com.athena.server.repository.SearchInterfaceImpl --value_type string --implementsGenericType singx.app.server.repository.InputDataTypeRepository#singx.app.shared.singx.InputDataType --annotation org.springframework.stereotype.Repository
+
+Class createAnnotation --toClass ~.app.server.repository.InputDataTypeRepositoryImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.repository.InputDataTypeRepository --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for InputDataType Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.repository.InputDataTypeRepositoryImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for InputDataType Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+buzzorfield create --type ~.app.server.repository.InputDataTypeRepositoryImpl --field_name emfResource --dataType com.athena.config.server.helper.ResourceFactoryManagerHelper --Modifier private --annotation org.springframework.beans.factory.annotation.Autowired
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.InputDataType --readOnly false --controllerClass ~.app.server.service.InputDataTypeService  --controllerImplClass ~.app.server.service.InputDataTypeServiceImpl --repositoryClass ~.app.server.repository.InputDataTypeRepository --repositoryImplClass ~.app.server.repository.InputDataTypeRepositoryImpl --methodType findAll --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.InputDataTypeBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.InputDataType --readOnly false --controllerClass ~.app.server.service.InputDataTypeService  --controllerImplClass ~.app.server.service.InputDataTypeServiceImpl --repositoryClass ~.app.server.repository.InputDataTypeRepository --repositoryImplClass ~.app.server.repository.InputDataTypeRepositoryImpl --methodType show --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.InputDataTypeBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.InputDataType --readOnly false --controllerClass ~.app.server.service.InputDataTypeService  --controllerImplClass ~.app.server.service.InputDataTypeServiceImpl --repositoryClass ~.app.server.repository.InputDataTypeRepository --repositoryImplClass ~.app.server.repository.InputDataTypeRepositoryImpl --methodType save --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.InputDataTypeBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.InputDataType --readOnly false --controllerClass ~.app.server.service.InputDataTypeService  --controllerImplClass ~.app.server.service.InputDataTypeServiceImpl --repositoryClass ~.app.server.repository.InputDataTypeRepository --repositoryImplClass ~.app.server.repository.InputDataTypeRepositoryImpl --methodType delete --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.InputDataTypeBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.InputDataType --readOnly false --controllerClass ~.app.server.service.InputDataTypeService  --controllerImplClass ~.app.server.service.InputDataTypeServiceImpl --repositoryClass ~.app.server.repository.InputDataTypeRepository --repositoryImplClass ~.app.server.repository.InputDataTypeRepositoryImpl --methodType update --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.InputDataTypeBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.InputDataType --readOnly false --controllerClass ~.app.server.service.InputDataTypeService  --controllerImplClass ~.app.server.service.InputDataTypeServiceImpl --repositoryClass ~.app.server.repository.InputDataTypeRepository --repositoryImplClass ~.app.server.repository.InputDataTypeRepositoryImpl --methodType search --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.InputDataTypeBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type BusinessService --sevicePath ~.app.server.service.InputDataTypeServiceImpl --fieldName inputTypeId --fieldType integer
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.InputDataType --queryName InputDataType.DefaultFinders --queryValue "select e from InputDataType e where e.systemInfo.activeStatus=1 and e.inputTypeId BETWEEN :mininputTypeId AND :maxinputTypeId"
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.InputDataType --queryName InputDataType.findById --queryValue "select e from InputDataType e where e.systemInfo.activeStatus=1 and  e.inputTypeId =:inputTypeId"
+
+methodoperation type namedQueryMethod --queryName InputDataType.findById --qvalue "select e from InputDataType e where e.systemInfo.activeStatus=1 and  e.inputTypeId =:inputTypeId" --qarameteres inputTypeId --typeOfParameteres Integer --entityName ~.app.shared.singx.InputDataType --controllerClass ~.app.server.service.InputDataTypeService --controllerImplClass ~.app.server.service.InputDataTypeServiceImpl --repositoryClass ~.app.server.repository.InputDataTypeRepository --repositoryImplClass ~.app.server.repository.InputDataTypeRepositoryImpl --businessServiceClass ~.app.server.businessservice.InputDataTypebzService --returnType singx.app.shared.singx.InputDataType --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.InputDataType
+
+buzzproperties codeStatus --PropertyFileName status --key InputDataType --value 0
+
+
+
+buzzorclass add --className InputDataTypeTestCase  --srcPath test
+Class createAnnotation --toClass InputDataTypeTestCase --annotation org.junit.runner.RunWith --key value.org.junit.runner.RunWith --value org.springframework.test.context.junit4.SpringJUnit4ClassRunner --value_type javaClass
+Class createAnnotation --toClass InputDataTypeTestCase --annotation org.springframework.test.context.web.WebAppConfiguration --key null.org.springframework.test.context.web.WebAppConfiguration --value null --value_type null
+Class createAnnotation --toClass InputDataTypeTestCase --annotation org.springframework.test.context.ContextConfiguration --key classes.org.springframework.test.context.ContextConfiguration --value singx.app.config.WebConfigExtended --value_type javaClass
+Class createAnnotation --toClass InputDataTypeTestCase --annotation org.junit.FixMethodOrder --key value.org.junit.FixMethodOrder.org.junit.FixMethodOrder --value org.junit.runners.MethodSorters$NAME_ASCENDING#org.junit.FixMethodOrder --value_type javatype
+ArrayAnnotation create --type InputDataTypeTestCase --key value --varaiable_name "" --value org.springframework.test.context.support.DependencyInjectionTestExecutionListener,org.springframework.test.context.support.DirtiesContextTestExecutionListener,org.springframework.test.context.transaction.TransactionalTestExecutionListener --valueType javatype,javatype,javatype --annotation org.springframework.test.context.TestExecutionListeners --addTo class
+
+buzzorfield create --type InputDataTypeTestCase --field_name inputdatatypeRepository --dataType singx.app.server.repository.InputDataTypeRepository<singx.app.shared.singx.InputDataType> --Modifier private --valueType 
+
+fieldAnnotation create --type InputDataTypeTestCase --field_name inputdatatypeRepository --valueType singx.app.server.repository.InputDataTypeRepository --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type InputDataTypeTestCase --field_name runtimeLogInfoHelper --dataType com.athena.framework.server.helper.RuntimeLogInfoHelper --Modifier private --valueType 
+
+fieldAnnotation create --type InputDataTypeTestCase --field_name runtimeLogInfoHelper --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type InputDataTypeTestCase --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --valueType 
+
+fieldAnnotation create --type InputDataTypeTestCase --field_name entityValidator --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper<Object> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type InputDataTypeTestCase --field_name valueGenerator --dataType com.athena.framework.server.test.RandomValueGenerator --Modifier private --initializer "new com.athena.framework.server.test.RandomValueGenerator()"
+
+buzzorfield create --type InputDataTypeTestCase --field_name map --dataType java.util.HashMap<String,Object> --Modifier private --initializer "new HashMap<String,Object>()" --isStatic true
+
+buzzorfield create --type InputDataTypeTestCase --field_name methodCallStack --dataType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --Modifier private --valueType 
+
+fieldAnnotation create --type InputDataTypeTestCase --field_name methodCallStack --valueType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type InputDataTypeTestCase --field_name session --dataType org.springframework.mock.web.MockHttpSession --Modifier protected --valueType javaType
+
+buzzorfield create --type InputDataTypeTestCase --field_name request --dataType org.springframework.mock.web.MockHttpServletRequest --Modifier protected --valueType javaType
+
+buzzorfield create --type InputDataTypeTestCase --field_name response --dataType org.springframework.mock.web.MockHttpServletResponse --Modifier protected --valueType javaType
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name startSession --modifier protected --return_type void --method_body "session = new MockHttpSession();"
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name endSession --modifier protected --return_type void --method_body "session.clearAttributes(); session.invalidate(); session = null;"
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name startRequest --modifier protected --return_type void --method_body "request = new MockHttpServletRequest(); request.setSession(session); org.springframework.web.context.request.RequestContextHolder.setRequestAttributes(new org.springframework.web.context.request.ServletRequestAttributes(request));"
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name endRequest --modifier protected --return_type void --method_body "((org.springframework.web.context.request.ServletRequestAttributes) org.springframework.web.context.request.RequestContextHolder.getRequestAttributes()).requestCompleted(); org.springframework.web.context.request.RequestContextHolder.resetRequestAttributes(); request = null;"
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name before --modifier public --return_type void --method_body "startSession(); startRequest(); setBeans();" --annotation org.junit.Before --key "" --value ""
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name after --modifier public --return_type void --method_body "endSession(); endRequest();" --annotation org.junit.After --key "" --value ""
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name setBeans --modifier private --return_type void --method_body "runtimeLogInfoHelper.createRuntimeLogUserInfo(1, "AAAAA", request.getRemoteHost());   org.junit.Assert.assertNotNull(runtimeLogInfoHelper);methodCallStack.setRequestId(java.util.UUID.randomUUID().toString().toUpperCase()); "
+ Import add --toClass InputDataTypeTestCase --importType singx.app.shared.singx.InputDataType
+ Import add --toClass InputDataTypeTestCase --importType com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface.RECORD_TYPE
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name test1Save --modifier public --return_type void --method_body " try { InputDataType inputdatatype=new InputDataType();inputdatatype.setInputTypeName("mk0JkQIdnegmdRhtne1Lo6M8xuX38UFSTrO0hF0SHajxiFwk0S"); inputdatatype.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);inputdatatype.setEntityValidator(entityValidator);inputdatatype.isValid();inputdatatypeRepository.save(inputdatatype); map.put("InputDataTypePrimaryKey", inputdatatype._getPrimarykey());} catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {org.junit.Assert.fail(e.getMessage()); }  catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name test2Update --modifier public --return_type void --method_body " try { org.junit.Assert.assertNotNull(map.get("InputDataTypePrimaryKey"));InputDataType inputdatatype=inputdatatypeRepository.findById((java.lang.Integer)map.get("InputDataTypePrimaryKey"));inputdatatype.setInputTypeName("YG2sbZitjufiLqzGewYzu8QY9KCBGZeBOLUMCojTeDk9RS7Q44");inputdatatype.setVersionId(1);inputdatatype.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);inputdatatypeRepository.update(inputdatatype);} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name test3FindById --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("InputDataTypePrimaryKey"));inputdatatypeRepository.findById((java.lang.Integer)map.get("InputDataTypePrimaryKey"));} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass InputDataTypeTestCase --method_name test4Delete --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("InputDataTypePrimaryKey"));inputdatatypeRepository.delete((java.lang.Integer)map.get("InputDataTypePrimaryKey"));/* Deleting refrenced data */} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+
+
+
+
+quit

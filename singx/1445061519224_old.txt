@@ -1,0 +1,206 @@
+
+
+
+
+ development mode --enabled true 
+
+
+
+buzzproperties codeStatus --PropertyFileName status --key Timezone --value 1
+
+// Entity Creation 
+
+buzzorclass add --className ~.app.shared.location.Timezone --implements java.io.Serializable,com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface --implementsGenericType java.util.Comparator#singx.app.shared.location.Timezone --annotation javax.persistence.Table,javax.persistence.Entity --key type.org.eclipse.persistence.annotations.Cache,isolation.org.eclipse.persistence.annotations.Cache,size.org.eclipse.persistence.annotations.Cache,expiry.org.eclipse.persistence.annotations.Cache,alwaysRefresh.org.eclipse.persistence.annotations.Cache,disableHits.org.eclipse.persistence.annotations.Cache,name.javax.persistence.Table,createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value org.eclipse.persistence.annotations.CacheType$CACHE#org.eclipse.persistence.annotations.CacheType,org.eclipse.persistence.config.CacheIsolationType$ISOLATED#org.eclipse.persistence.config.CacheIsolationType,64000.org.eclipse.persistence.annotations.Cache,1.org.eclipse.persistence.annotations.Cache,TRUE.org.eclipse.persistence.annotations.Cache,TRUE.org.eclipse.persistence.annotations.Cache,ast_Timezone_M.javax.persistence.Table,john.doe.com.athena.annotation.SourceCodeAuthorClass,.com.athena.annotation.SourceCodeAuthorClass,1.com.athena.annotation.SourceCodeAuthorClass,Timezone.com.athena.annotation.SourceCodeAuthorClass,com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity --value_type javaType,javaType,Integer,Integer,Boolean,Boolean,String,String,String,String,String,javaType
+
+Persistent add entity --entityName singx.app.shared.location.Timezone
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name utcdifference --dataType java.lang.Integer --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value utcdifference.com.fasterxml.jackson.annotation.JsonProperty,utcdifference.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.location.Timezone --field_name utcdifference --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.location.Timezone --field_name utcdifference --valueType integer --annotation javax.validation.constraints.Min --key value.javax.validation.constraints.Min --value "0.javax.validation.constraints.Min"
+
+fieldAnnotation create --type ~.app.shared.location.Timezone --field_name utcdifference --valueType integer --annotation javax.validation.constraints.Max --key value.javax.validation.constraints.Max --value "11.javax.validation.constraints.Max"
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name gmtLabel --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value gmtLabel.com.fasterxml.jackson.annotation.JsonProperty,gmtLabel.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.location.Timezone --field_name gmtLabel --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name timeZoneLabel --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value timeZoneLabel.com.fasterxml.jackson.annotation.JsonProperty,timeZoneLabel.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.location.Timezone --field_name timeZoneLabel --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name country --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value country.com.fasterxml.jackson.annotation.JsonProperty,country.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.location.Timezone --field_name country --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name cities --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value cities.com.fasterxml.jackson.annotation.JsonProperty,cities.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.location.Timezone --field_name cities --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#256
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name primaryKey --dataType java.lang.String --Modifier private --annotation javax.persistence.Transient
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name timeZoneId --dataType java.lang.String --Modifier private --valueType String,String,String --annotation javax.persistence.Id,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty,javax.persistence.GeneratedValue --key value.com.fasterxml.jackson.annotation.JsonProperty,generator.javax.persistence.GeneratedValue,name.javax.persistence.Column --value timeZoneId.com.fasterxml.jackson.annotation.JsonProperty,UUIDGenerator.javax.persistence.GeneratedValue,timeZoneId.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.location.Timezone --field_name timeZoneId --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#64
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --annotation javax.persistence.Transient,com.fasterxml.jackson.annotation.JsonIgnore
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name versionId --dataType Integer --Modifier private --annotation javax.persistence.Version,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key name.javax.persistence.Column,value.com.fasterxml.jackson.annotation.JsonProperty --value versionId.javax.persistence.Column,versionId.com.fasterxml.jackson.annotation.JsonProperty --valueType String,String
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name entityAudit --dataType singx.app.shared.EntityAudit --Modifier private --annotation javax.persistence.Embedded,com.fasterxml.jackson.annotation.JsonIgnore --initializer "new EntityAudit()"
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name systemInfo --dataType singx.app.shared.SystemInfo --Modifier private --annotation javax.persistence.Embedded --initializer "new SystemInfo()"
+
+buzzorfield create --type ~.app.shared.location.Timezone --field_name primaryDisplay --dataType String --Modifier private --annotation javax.persistence.Transient
+
+methodoperation type getSetMethod --class ~.app.shared.location.Timezone --variableName utcdifference --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.location.Timezone --variableName gmtLabel --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.location.Timezone --variableName timeZoneLabel --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.location.Timezone --variableName country --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.location.Timezone --variableName cities --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.location.Timezone --variableName primaryKey --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.location.Timezone --variableName timeZoneId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.location.Timezone --variableName versionId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.location.Timezone --variableName primaryDisplay --getterMethod false --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.location.Timezone --variableName systemInfo --getterMethod true --setterMethod true
+
+methodoperation type hardDelete --entityName ~.app.shared.location.Timezone
+
+methodoperation type setValidator --class ~.app.shared.location.Timezone
+
+methodoperation type setLoggedUserInfo --class ~.app.shared.location.Timezone --updateFieldName updatedBy --createFieldName createdBy --activeFieldName activeStatus --isAggregate false
+
+methodoperation type comparatorDefaultBody --class ~.app.shared.location.Timezone
+
+methodoperation type getPrimayDisplay --class ~.app.shared.location.Timezone --variableName utcdifference,timeZoneLabel
+
+methodoperation type toString --class ~.app.shared.location.Timezone
+
+methodoperation type hashCode --class ~.app.shared.location.Timezone --primaryClass true
+
+methodoperation type equals --class ~.app.shared.location.Timezone --primaryClass true
+
+class --abstract true --class ~.app.server.service.TimezoneService
+
+buzzorclass add --className ~.app.server.service.TimezoneServiceImpl  --extends singx.app.server.service.TimezoneService --value_type string --annotation org.springframework.web.bind.annotation.RestController
+
+Class createAnnotation --toClass ~.app.server.service.TimezoneServiceImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.service.TimezoneService --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for Timezone Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.service.TimezoneServiceImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for Timezone Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+interfacebuzzor add --InterfaceName ~.app.server.repository.TimezoneRepository --genericType T --extends com.athena.server.repository.SearchInterface
+
+buzzorclass add --className ~.app.server.repository.TimezoneRepositoryImpl --implements --extends com.athena.server.repository.SearchInterfaceImpl --value_type string --implementsGenericType singx.app.server.repository.TimezoneRepository#singx.app.shared.location.Timezone --annotation org.springframework.stereotype.Repository
+
+Class createAnnotation --toClass ~.app.server.repository.TimezoneRepositoryImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.repository.TimezoneRepository --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for Timezone Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.repository.TimezoneRepositoryImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for Timezone Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+buzzorfield create --type ~.app.server.repository.TimezoneRepositoryImpl --field_name emfResource --dataType com.athena.config.server.helper.ResourceFactoryManagerHelper --Modifier private --annotation org.springframework.beans.factory.annotation.Autowired
+
+methodoperation type ENTITY --entityName ~.app.shared.location.Timezone --readOnly false --controllerClass ~.app.server.service.TimezoneService  --controllerImplClass ~.app.server.service.TimezoneServiceImpl --repositoryClass ~.app.server.repository.TimezoneRepository --repositoryImplClass ~.app.server.repository.TimezoneRepositoryImpl --methodType findAll --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.TimezoneBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.location.Timezone --readOnly false --controllerClass ~.app.server.service.TimezoneService  --controllerImplClass ~.app.server.service.TimezoneServiceImpl --repositoryClass ~.app.server.repository.TimezoneRepository --repositoryImplClass ~.app.server.repository.TimezoneRepositoryImpl --methodType show --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.TimezoneBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.location.Timezone --readOnly false --controllerClass ~.app.server.service.TimezoneService  --controllerImplClass ~.app.server.service.TimezoneServiceImpl --repositoryClass ~.app.server.repository.TimezoneRepository --repositoryImplClass ~.app.server.repository.TimezoneRepositoryImpl --methodType save --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.TimezoneBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.location.Timezone --readOnly false --controllerClass ~.app.server.service.TimezoneService  --controllerImplClass ~.app.server.service.TimezoneServiceImpl --repositoryClass ~.app.server.repository.TimezoneRepository --repositoryImplClass ~.app.server.repository.TimezoneRepositoryImpl --methodType delete --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.TimezoneBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+
+
+methodoperation type ENTITY --entityName ~.app.shared.location.Timezone --readOnly false --controllerClass ~.app.server.service.TimezoneService  --controllerImplClass ~.app.server.service.TimezoneServiceImpl --repositoryClass ~.app.server.repository.TimezoneRepository --repositoryImplClass ~.app.server.repository.TimezoneRepositoryImpl --methodType update --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.TimezoneBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.location.Timezone --readOnly false --controllerClass ~.app.server.service.TimezoneService  --controllerImplClass ~.app.server.service.TimezoneServiceImpl --repositoryClass ~.app.server.repository.TimezoneRepository --repositoryImplClass ~.app.server.repository.TimezoneRepositoryImpl --methodType search --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.TimezoneBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type BusinessService --sevicePath ~.app.server.service.TimezoneServiceImpl --fieldName utcdifference --fieldType integer
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.location.Timezone --queryName Timezone.DefaultFinders --queryValue "select e from Timezone e where e.systemInfo.activeStatus=1 and e.utcdifference BETWEEN :minutcdifference AND :maxutcdifference"
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.location.Timezone --queryName Timezone.findById --queryValue "select e from Timezone e where e.systemInfo.activeStatus=1 and  e.timeZoneId =:timeZoneId"
+
+methodoperation type namedQueryMethod --queryName Timezone.findById --qvalue "select e from Timezone e where e.systemInfo.activeStatus=1 and  e.timeZoneId =:timeZoneId" --qarameteres timeZoneId --typeOfParameteres String --entityName ~.app.shared.location.Timezone --controllerClass ~.app.server.service.TimezoneService --controllerImplClass ~.app.server.service.TimezoneServiceImpl --repositoryClass ~.app.server.repository.TimezoneRepository --repositoryImplClass ~.app.server.repository.TimezoneRepositoryImpl --businessServiceClass ~.app.server.businessservice.TimezonebzService --returnType singx.app.shared.location.Timezone --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.location.Timezone
+
+buzzproperties codeStatus --PropertyFileName status --key Timezone --value 0
+
+
+
+buzzorclass add --className TimezoneTestCase  --srcPath test
+Class createAnnotation --toClass TimezoneTestCase --annotation org.junit.runner.RunWith --key value.org.junit.runner.RunWith --value org.springframework.test.context.junit4.SpringJUnit4ClassRunner --value_type javaClass
+Class createAnnotation --toClass TimezoneTestCase --annotation org.springframework.test.context.web.WebAppConfiguration --key null.org.springframework.test.context.web.WebAppConfiguration --value null --value_type null
+Class createAnnotation --toClass TimezoneTestCase --annotation org.springframework.test.context.ContextConfiguration --key classes.org.springframework.test.context.ContextConfiguration --value singx.app.config.WebConfigExtended --value_type javaClass
+Class createAnnotation --toClass TimezoneTestCase --annotation org.junit.FixMethodOrder --key value.org.junit.FixMethodOrder.org.junit.FixMethodOrder --value org.junit.runners.MethodSorters$NAME_ASCENDING#org.junit.FixMethodOrder --value_type javatype
+ArrayAnnotation create --type TimezoneTestCase --key value --varaiable_name "" --value org.springframework.test.context.support.DependencyInjectionTestExecutionListener,org.springframework.test.context.support.DirtiesContextTestExecutionListener,org.springframework.test.context.transaction.TransactionalTestExecutionListener --valueType javatype,javatype,javatype --annotation org.springframework.test.context.TestExecutionListeners --addTo class
+
+buzzorfield create --type TimezoneTestCase --field_name timezoneRepository --dataType singx.app.server.repository.TimezoneRepository<singx.app.shared.location.Timezone> --Modifier private --valueType 
+
+fieldAnnotation create --type TimezoneTestCase --field_name timezoneRepository --valueType singx.app.server.repository.TimezoneRepository --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type TimezoneTestCase --field_name runtimeLogInfoHelper --dataType com.athena.framework.server.helper.RuntimeLogInfoHelper --Modifier private --valueType 
+
+fieldAnnotation create --type TimezoneTestCase --field_name runtimeLogInfoHelper --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type TimezoneTestCase --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --valueType 
+
+fieldAnnotation create --type TimezoneTestCase --field_name entityValidator --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper<Object> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type TimezoneTestCase --field_name valueGenerator --dataType com.athena.framework.server.test.RandomValueGenerator --Modifier private --initializer "new com.athena.framework.server.test.RandomValueGenerator()"
+
+buzzorfield create --type TimezoneTestCase --field_name map --dataType java.util.HashMap<String,Object> --Modifier private --initializer "new HashMap<String,Object>()" --isStatic true
+
+buzzorfield create --type TimezoneTestCase --field_name methodCallStack --dataType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --Modifier private --valueType 
+
+fieldAnnotation create --type TimezoneTestCase --field_name methodCallStack --valueType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type TimezoneTestCase --field_name session --dataType org.springframework.mock.web.MockHttpSession --Modifier protected --valueType javaType
+
+buzzorfield create --type TimezoneTestCase --field_name request --dataType org.springframework.mock.web.MockHttpServletRequest --Modifier protected --valueType javaType
+
+buzzorfield create --type TimezoneTestCase --field_name response --dataType org.springframework.mock.web.MockHttpServletResponse --Modifier protected --valueType javaType
+
+buzzormethod add --toClass TimezoneTestCase --method_name startSession --modifier protected --return_type void --method_body "session = new MockHttpSession();"
+
+buzzormethod add --toClass TimezoneTestCase --method_name endSession --modifier protected --return_type void --method_body "session.clearAttributes(); session.invalidate(); session = null;"
+
+buzzormethod add --toClass TimezoneTestCase --method_name startRequest --modifier protected --return_type void --method_body "request = new MockHttpServletRequest(); request.setSession(session); org.springframework.web.context.request.RequestContextHolder.setRequestAttributes(new org.springframework.web.context.request.ServletRequestAttributes(request));"
+
+buzzormethod add --toClass TimezoneTestCase --method_name endRequest --modifier protected --return_type void --method_body "((org.springframework.web.context.request.ServletRequestAttributes) org.springframework.web.context.request.RequestContextHolder.getRequestAttributes()).requestCompleted(); org.springframework.web.context.request.RequestContextHolder.resetRequestAttributes(); request = null;"
+
+buzzormethod add --toClass TimezoneTestCase --method_name before --modifier public --return_type void --method_body "startSession(); startRequest(); setBeans();" --annotation org.junit.Before --key "" --value ""
+
+buzzormethod add --toClass TimezoneTestCase --method_name after --modifier public --return_type void --method_body "endSession(); endRequest();" --annotation org.junit.After --key "" --value ""
+
+buzzormethod add --toClass TimezoneTestCase --method_name setBeans --modifier private --return_type void --method_body "runtimeLogInfoHelper.createRuntimeLogUserInfo(1, "AAAAA", request.getRemoteHost());   org.junit.Assert.assertNotNull(runtimeLogInfoHelper);methodCallStack.setRequestId(java.util.UUID.randomUUID().toString().toUpperCase()); "
+ Import add --toClass TimezoneTestCase --importType singx.app.shared.location.Timezone
+ Import add --toClass TimezoneTestCase --importType com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface.RECORD_TYPE
+
+buzzormethod add --toClass TimezoneTestCase --method_name test1Save --modifier public --return_type void --method_body " try { Timezone timezone=new Timezone();timezone.setCities("VcHi4MdJHq53XBxlewEaFlewGq0tiF3vyqAknD3ULCVnitS4R3"); timezone.setCountry("XHrUtZ8BDDnqdToG2Sknt6QDHZAoMfCI0UIB2uNi70Hdy6CcM3"); timezone.setGmtLabel("F8gHZRCl1CZpats8EMBSova1kKg7HS5jZqovTg3SP0bwF44zW6"); timezone.setTimeZoneLabel("CHx4QnMp0w3j7P0qz4ub0ea7JUyc5uaLWg9yYfRHgJbDHa14yK"); timezone.setUtcdifference(5); timezone.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);timezone.setEntityValidator(entityValidator);timezone.isValid();timezoneRepository.save(timezone); map.put("TimezonePrimaryKey", timezone._getPrimarykey());} catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {org.junit.Assert.fail(e.getMessage()); }  catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass TimezoneTestCase --method_name test2Update --modifier public --return_type void --method_body " try { org.junit.Assert.assertNotNull(map.get("TimezonePrimaryKey"));Timezone timezone=timezoneRepository.findById((java.lang.String)map.get("TimezonePrimaryKey"));timezone.setCities("oGBOrBbHcktJC95XVKqAIA6kRjhVJjVzDmWkwPBLCk2VKvDLFI");timezone.setCountry("AjldL1vYSl7VfL6xMt77w8ml0KOdfiuEgJknPG54F472EKqoRz");timezone.setGmtLabel("qNWaLx0TX2RiO9bTGCirNdbMchYijkj330RBRPSNVwtZdOIWtM");timezone.setTimeZoneLabel("bAiKfUaZkevPXp7CS7yuCjC1jOgaSraPAsiEJmmefGZkYWIyVN");timezone.setUtcdifference(9);timezone.setVersionId(1);timezone.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);timezoneRepository.update(timezone);} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass TimezoneTestCase --method_name test3FindById --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("TimezonePrimaryKey"));timezoneRepository.findById((java.lang.String)map.get("TimezonePrimaryKey"));} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass TimezoneTestCase --method_name test4Delete --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("TimezonePrimaryKey"));timezoneRepository.delete((java.lang.String)map.get("TimezonePrimaryKey"));/* Deleting refrenced data */} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+
+
+
+
+quit

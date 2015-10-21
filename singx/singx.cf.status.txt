@@ -1,0 +1,14 @@
+ExitCode=1
+TotalTimeTaken=1.775
+TotalFiles=427
+TotalFolders=5483
+TotalJavaFiles=424
+TotalJsFiles=3694
+TotalJsonFiles=246
+TotalCssFiles=620
+TotalXmlFiles=254
+TotalPropertiesFiles=60
+Tue Oct 20 05:03:17 UTC 2015 : Code Factory Process Started for instructions singx.cf
+Tue Oct 20 05:03:41 UTC 2015 : Code Factory : Total Files created : 427 | Total Time Taken : 1.775 in seconds
+Tue Oct 20 05:03:40 UTC 2015 : Code Factory : Process Completed Blue Print instructions
+Tue Oct 20 05:03:41 UTC 2015 : Code Factory : Exited with the code 1

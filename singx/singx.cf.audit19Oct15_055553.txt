@@ -1,0 +1,13 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-19 05:55:32
+ development mode --enabled true 
+buzzorclass add --className ~.app.shared.backoffice.ACL.IndividualCustACL 
+methodoperation type setParameterizedConstructor --class ~.app.shared.backoffice.ACL.IndividualCustACL --fields --constructorBody "this.customercontadto = _customercontadto;this.doMapping();" --parameterName _customercontadto --parameterType singx.app.shared.backoffice.singx.CustomerContaDTO
+buzzorfield create --type ~.app.shared.backoffice.ACL.IndividualCustACL --field_name customercontadto --dataType singx.app.shared.backoffice.singx.CustomerContaDTO --Modifier private --valueType String --isStatic false
+buzzorfield create --type ~.app.shared.backoffice.ACL.IndividualCustACL --field_name individualregdetail --dataType singx.app.shared.singx.IndividualRegDetail --Modifier private --valueType String --isStatic false
+buzzormethod add --toClass ~.app.shared.backoffice.ACL.IndividualCustACL --method_name indiCustAcl --modifier public --return_type singx.app.shared.singx.IndividualRegDetail --method_body "return individualregdetail;" --key "" --value ""
+buzzormethod add --toClass ~.app.shared.backoffice.ACL.IndividualCustACL --method_name doMapping --modifier public --return_type void --method_body "individualregdetail=new  IndividualRegDetail();individualregdetail.setDocumentId(customercontadto.getDocumentId());individualregdetail.setExpiryDate(customercontadto.getExpiryDate());individualregdetail.setIdProofValue(customercontadto.getIdProofValue());individualregdetail.setMapId(customercontadto.getMapId());individualregdetail.setNationalityId(customercontadto.getNationalityId());individualregdetail.setResidenceTypeId(customercontadto.getResidenceTypeId());" --key "" --value ""
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-19 05:55:53
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-19 05:55:53
+// script --file singx.cf
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-19 05:55:53

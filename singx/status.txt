@@ -1,0 +1,2 @@
+Corridor=1
+Corridor=0

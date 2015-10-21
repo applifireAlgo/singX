@@ -1,0 +1,262 @@
+
+
+
+
+ development mode --enabled true 
+
+
+
+buzzproperties codeStatus --PropertyFileName status --key CfgDocument --value 1
+
+// Entity Creation 
+
+buzzorclass add --className ~.app.shared.singx.CfgDocument --implements java.io.Serializable,com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface --implementsGenericType java.util.Comparator#singx.app.shared.singx.CfgDocument --annotation javax.persistence.Table,javax.persistence.Entity --key type.org.eclipse.persistence.annotations.Cache,size.org.eclipse.persistence.annotations.Cache,expiry.org.eclipse.persistence.annotations.Cache,alwaysRefresh.org.eclipse.persistence.annotations.Cache,disableHits.org.eclipse.persistence.annotations.Cache,name.javax.persistence.Table,createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value org.eclipse.persistence.annotations.CacheType$CACHE#org.eclipse.persistence.annotations.CacheType,64000.org.eclipse.persistence.annotations.Cache,0.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,FALSE.org.eclipse.persistence.annotations.Cache,ast_CfgDocument_M.javax.persistence.Table,john.doe.com.athena.annotation.SourceCodeAuthorClass,.com.athena.annotation.SourceCodeAuthorClass,1.com.athena.annotation.SourceCodeAuthorClass,CfgDocument.com.athena.annotation.SourceCodeAuthorClass,com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity --value_type javaType,Integer,Integer,Boolean,Boolean,String,String,String,String,String,javaType
+
+Persistent add entity --entityName singx.app.shared.singx.CfgDocument
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name documentName --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value documentName.com.fasterxml.jackson.annotation.JsonProperty,documentName.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name documentName --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name documentName --valueType integer,integer --annotation javax.validation.constraints.Size --key min.javax.validation.constraints.Size,max.javax.validation.constraints.Size --value 0#cfg#50
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name isReferenceNoReqd --dataType java.lang.Boolean --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value isReferenceNoReqd.com.fasterxml.jackson.annotation.JsonProperty,isReferenceNoReqd.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name isReferenceNoReqd --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name isIssueDateReqd --dataType java.lang.Boolean --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value isIssueDateReqd.com.fasterxml.jackson.annotation.JsonProperty,isIssueDateReqd.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name isIssueDateReqd --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name isExpiryDateReqd --dataType java.lang.Boolean --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value isExpiryDateReqd.com.fasterxml.jackson.annotation.JsonProperty,isExpiryDateReqd.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name isExpiryDateReqd --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name isRemarksReqd --dataType java.lang.Boolean --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value isRemarksReqd.com.fasterxml.jackson.annotation.JsonProperty,isRemarksReqd.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name isRemarksReqd --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name isMandatory --dataType java.lang.Boolean --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value isMandatory.com.fasterxml.jackson.annotation.JsonProperty,isMandatory.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name isMandatory --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name displaySeq --dataType java.lang.Integer --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value displaySeq.com.fasterxml.jackson.annotation.JsonProperty,displaySeq.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name displaySeq --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name displaySeq --valueType integer --annotation javax.validation.constraints.Min --key value.javax.validation.constraints.Min --value "-2147483648.javax.validation.constraints.Min"
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name displaySeq --valueType integer --annotation javax.validation.constraints.Max --key value.javax.validation.constraints.Max --value "2147483647.javax.validation.constraints.Max"
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name maxSize --dataType java.lang.Integer --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value maxSize.com.fasterxml.jackson.annotation.JsonProperty,maxSize.javax.persistence.Column
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name maxSize --valueType string --annotation javax.validation.constraints.NotNull --key value --value 1
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name maxSize --valueType integer --annotation javax.validation.constraints.Min --key value.javax.validation.constraints.Min --value "-2147483648.javax.validation.constraints.Min"
+
+fieldAnnotation create --type ~.app.shared.singx.CfgDocument --field_name maxSize --valueType integer --annotation javax.validation.constraints.Max --key value.javax.validation.constraints.Max --value "2147483647.javax.validation.constraints.Max"
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name primaryKey --dataType java.lang.String --Modifier private --annotation javax.persistence.Transient
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name documentId --dataType java.lang.String --Modifier private --valueType String,String,String --annotation javax.persistence.Id,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty,javax.persistence.GeneratedValue --key value.com.fasterxml.jackson.annotation.JsonProperty,generator.javax.persistence.GeneratedValue,name.javax.persistence.Column --value documentId.com.fasterxml.jackson.annotation.JsonProperty,UUIDGenerator.javax.persistence.GeneratedValue,documentId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name customerType --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value customerType.com.fasterxml.jackson.annotation.JsonProperty,customerType.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name countryId --dataType java.lang.String --Modifier private --valueType String,String --annotation javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key value.com.fasterxml.jackson.annotation.JsonProperty,name.javax.persistence.Column --value countryId.com.fasterxml.jackson.annotation.JsonProperty,countryId.javax.persistence.Column
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --annotation javax.persistence.Transient,com.fasterxml.jackson.annotation.JsonIgnore
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name versionId --dataType Integer --Modifier private --annotation javax.persistence.Version,javax.persistence.Column,com.fasterxml.jackson.annotation.JsonProperty --key name.javax.persistence.Column,value.com.fasterxml.jackson.annotation.JsonProperty --value versionId.javax.persistence.Column,versionId.com.fasterxml.jackson.annotation.JsonProperty --valueType String,String
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name entityAudit --dataType singx.app.shared.EntityAudit --Modifier private --annotation javax.persistence.Embedded,com.fasterxml.jackson.annotation.JsonIgnore --initializer "new EntityAudit()"
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name systemInfo --dataType singx.app.shared.SystemInfo --Modifier private --annotation javax.persistence.Embedded --initializer "new SystemInfo()"
+
+buzzorfield create --type ~.app.shared.singx.CfgDocument --field_name primaryDisplay --dataType String --Modifier private --annotation javax.persistence.Transient
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName documentName --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName isReferenceNoReqd --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName isIssueDateReqd --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName isExpiryDateReqd --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName isRemarksReqd --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName isMandatory --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName displaySeq --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName maxSize --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName primaryKey --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName documentId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName customerType --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName countryId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName versionId --getterMethod true --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName primaryDisplay --getterMethod false --setterMethod true
+
+methodoperation type getSetMethod --class ~.app.shared.singx.CfgDocument --variableName systemInfo --getterMethod true --setterMethod true
+
+methodoperation type hardDelete --entityName ~.app.shared.singx.CfgDocument
+
+methodoperation type setValidator --class ~.app.shared.singx.CfgDocument
+
+methodoperation type setLoggedUserInfo --class ~.app.shared.singx.CfgDocument --updateFieldName updatedBy --createFieldName createdBy --activeFieldName activeStatus --isAggregate false
+
+methodoperation type comparatorDefaultBody --class ~.app.shared.singx.CfgDocument
+
+methodoperation type getPrimayDisplay --class ~.app.shared.singx.CfgDocument
+
+methodoperation type toString --class ~.app.shared.singx.CfgDocument
+
+methodoperation type hashCode --class ~.app.shared.singx.CfgDocument --primaryClass true
+
+methodoperation type equals --class ~.app.shared.singx.CfgDocument --primaryClass true
+
+class --abstract true --class ~.app.server.service.CfgDocumentService
+
+buzzorclass add --className ~.app.server.service.CfgDocumentServiceImpl  --extends singx.app.server.service.CfgDocumentService --value_type string --annotation org.springframework.web.bind.annotation.RestController
+
+Class createAnnotation --toClass ~.app.server.service.CfgDocumentServiceImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.service.CfgDocumentService --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for CfgDocument Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.service.CfgDocumentServiceImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Service for CfgDocument Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+interfacebuzzor add --InterfaceName ~.app.server.repository.CfgDocumentRepository --genericType T --extends com.athena.server.repository.SearchInterface
+
+buzzorclass add --className ~.app.server.repository.CfgDocumentRepositoryImpl --implements --extends com.athena.server.repository.SearchInterfaceImpl --value_type string --implementsGenericType singx.app.server.repository.CfgDocumentRepository#singx.app.shared.singx.CfgDocument --annotation org.springframework.stereotype.Repository
+
+Class createAnnotation --toClass ~.app.server.repository.CfgDocumentRepositoryImpl --annotation org.springframework.context.annotation.Scope --key value.org.springframework.context.annotation.Scope,proxyMode.org.springframework.context.annotation.Scope --value request.org.springframework.context.annotation.Scope#cfg#org.springframework.context.annotation.ScopedProxyMode$TARGET_CLASS#org.springframework.context.annotation.Scope --value_type string,javatype
+
+Class createAnnotation --toClass ~.app.server.repository.CfgDocumentRepository --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for CfgDocument Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+Class createAnnotation --toClass ~.app.server.repository.CfgDocumentRepositoryImpl --annotation com.athena.annotation.SourceCodeAuthorClass --key createdBy.com.athena.annotation.SourceCodeAuthorClass,updatedBy.com.athena.annotation.SourceCodeAuthorClass,versionNumber.com.athena.annotation.SourceCodeAuthorClass,comments.com.athena.annotation.SourceCodeAuthorClass,complexity.com.athena.annotation.SourceCodeAuthorClass --value "john.doe.com.athena.annotation.SourceCodeAuthorClass#cfg#.com.athena.annotation.SourceCodeAuthorClass#cfg#1.com.athena.annotation.SourceCodeAuthorClass#cfg#Repository for CfgDocument Master table Entity.com.athena.annotation.SourceCodeAuthorClass#cfg#com.athena.annotation.Complexity$LOW#com.athena.annotation.Complexity " --value_type String,String,String,String,javaType
+
+buzzorfield create --type ~.app.server.repository.CfgDocumentRepositoryImpl --field_name emfResource --dataType com.athena.config.server.helper.ResourceFactoryManagerHelper --Modifier private --annotation org.springframework.beans.factory.annotation.Autowired
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.CfgDocument --readOnly false --controllerClass ~.app.server.service.CfgDocumentService  --controllerImplClass ~.app.server.service.CfgDocumentServiceImpl --repositoryClass ~.app.server.repository.CfgDocumentRepository --repositoryImplClass ~.app.server.repository.CfgDocumentRepositoryImpl --methodType findAll --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.CfgDocumentBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.CfgDocument --readOnly false --controllerClass ~.app.server.service.CfgDocumentService  --controllerImplClass ~.app.server.service.CfgDocumentServiceImpl --repositoryClass ~.app.server.repository.CfgDocumentRepository --repositoryImplClass ~.app.server.repository.CfgDocumentRepositoryImpl --methodType show --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.CfgDocumentBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.CfgDocument --readOnly false --controllerClass ~.app.server.service.CfgDocumentService  --controllerImplClass ~.app.server.service.CfgDocumentServiceImpl --repositoryClass ~.app.server.repository.CfgDocumentRepository --repositoryImplClass ~.app.server.repository.CfgDocumentRepositoryImpl --methodType save --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.CfgDocumentBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.CfgDocument --readOnly false --controllerClass ~.app.server.service.CfgDocumentService  --controllerImplClass ~.app.server.service.CfgDocumentServiceImpl --repositoryClass ~.app.server.repository.CfgDocumentRepository --repositoryImplClass ~.app.server.repository.CfgDocumentRepositoryImpl --methodType delete --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.CfgDocumentBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.CfgDocument --readOnly false --controllerClass ~.app.server.service.CfgDocumentService  --controllerImplClass ~.app.server.service.CfgDocumentServiceImpl --repositoryClass ~.app.server.repository.CfgDocumentRepository --repositoryImplClass ~.app.server.repository.CfgDocumentRepositoryImpl --methodType update --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.CfgDocumentBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type ENTITY --entityName ~.app.shared.singx.CfgDocument --readOnly false --controllerClass ~.app.server.service.CfgDocumentService  --controllerImplClass ~.app.server.service.CfgDocumentServiceImpl --repositoryClass ~.app.server.repository.CfgDocumentRepository --repositoryImplClass ~.app.server.repository.CfgDocumentRepositoryImpl --methodType search --isMultitenant false --transactionType none --businessServiceClass ~.app.server.businessservice.CfgDocumentBusinessService --isUserAccess false --isAggregateRoot false --isBiz false --isInheritance false --isConcreteClass false
+
+methodoperation type BusinessService --sevicePath ~.app.server.service.CfgDocumentServiceImpl --fieldName countryId,documentId,documentName --fieldType String,String,String
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.CfgDocument --queryName CfgDocument.DefaultFinders --queryValue "select e from CfgDocument e where e.systemInfo.activeStatus=1 and e.documentId LIKE :documentId and e.documentName LIKE :documentName and e.countryId LIKE :countryId"
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.CfgDocument --queryName CfgDocument.findByCustomerType --queryValue "select e from CfgDocument e where e.systemInfo.activeStatus=1 and e.customerType=:customerType"
+
+methodoperation type namedQueryMethod --queryName CfgDocument.findByCustomerType --qvalue "select e from CfgDocument e where e.systemInfo.activeStatus=1 and e.customerType=:customerType" --qarameteres customerType --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.CfgDocument --controllerClass ~.app.server.service.CfgDocumentService --controllerImplClass ~.app.server.service.CfgDocumentServiceImpl --repositoryClass ~.app.server.repository.CfgDocumentRepository --repositoryImplClass ~.app.server.repository.CfgDocumentRepositoryImpl --businessServiceClass ~.app.server.businessservice.CfgDocumentbzService --returnType java.util.List<singx.app.shared.singx.CfgDocument> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.CustomerType
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.CfgDocument --queryName CfgDocument.findByCountryId --queryValue "select e from CfgDocument e where e.systemInfo.activeStatus=1 and e.countryId=:countryId"
+
+methodoperation type namedQueryMethod --queryName CfgDocument.findByCountryId --qvalue "select e from CfgDocument e where e.systemInfo.activeStatus=1 and e.countryId=:countryId" --qarameteres countryId --typeOfParameteres java.lang.String --entityName ~.app.shared.singx.CfgDocument --controllerClass ~.app.server.service.CfgDocumentService --controllerImplClass ~.app.server.service.CfgDocumentServiceImpl --repositoryClass ~.app.server.repository.CfgDocumentRepository --repositoryImplClass ~.app.server.repository.CfgDocumentRepositoryImpl --businessServiceClass ~.app.server.businessservice.CfgDocumentbzService --returnType java.util.List<singx.app.shared.singx.CfgDocument> --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.Country
+
+// Named Query  
+
+namedQuery insert --toClass ~.app.shared.singx.CfgDocument --queryName CfgDocument.findById --queryValue "select e from CfgDocument e where e.systemInfo.activeStatus=1 and  e.documentId =:documentId"
+
+methodoperation type namedQueryMethod --queryName CfgDocument.findById --qvalue "select e from CfgDocument e where e.systemInfo.activeStatus=1 and  e.documentId =:documentId" --qarameteres documentId --typeOfParameteres String --entityName ~.app.shared.singx.CfgDocument --controllerClass ~.app.server.service.CfgDocumentService --controllerImplClass ~.app.server.service.CfgDocumentServiceImpl --repositoryClass ~.app.server.repository.CfgDocumentRepository --repositoryImplClass ~.app.server.repository.CfgDocumentRepositoryImpl --businessServiceClass ~.app.server.businessservice.CfgDocumentbzService --returnType singx.app.shared.singx.CfgDocument --isFindByID true --isUserAccess false --isMultitenant false --refEntity singx.app.shared.singx.CfgDocument
+
+buzzproperties codeStatus --PropertyFileName status --key CfgDocument --value 0
+
+
+
+buzzorclass add --className CfgDocumentTestCase  --srcPath test
+Class createAnnotation --toClass CfgDocumentTestCase --annotation org.junit.runner.RunWith --key value.org.junit.runner.RunWith --value org.springframework.test.context.junit4.SpringJUnit4ClassRunner --value_type javaClass
+Class createAnnotation --toClass CfgDocumentTestCase --annotation org.springframework.test.context.web.WebAppConfiguration --key null.org.springframework.test.context.web.WebAppConfiguration --value null --value_type null
+Class createAnnotation --toClass CfgDocumentTestCase --annotation org.springframework.test.context.ContextConfiguration --key classes.org.springframework.test.context.ContextConfiguration --value singx.app.config.WebConfigExtended --value_type javaClass
+Class createAnnotation --toClass CfgDocumentTestCase --annotation org.junit.FixMethodOrder --key value.org.junit.FixMethodOrder.org.junit.FixMethodOrder --value org.junit.runners.MethodSorters$NAME_ASCENDING#org.junit.FixMethodOrder --value_type javatype
+ArrayAnnotation create --type CfgDocumentTestCase --key value --varaiable_name "" --value org.springframework.test.context.support.DependencyInjectionTestExecutionListener,org.springframework.test.context.support.DirtiesContextTestExecutionListener,org.springframework.test.context.transaction.TransactionalTestExecutionListener --valueType javatype,javatype,javatype --annotation org.springframework.test.context.TestExecutionListeners --addTo class
+
+buzzorfield create --type CfgDocumentTestCase --field_name cfgdocumentRepository --dataType singx.app.server.repository.CfgDocumentRepository<singx.app.shared.singx.CfgDocument> --Modifier private --valueType 
+
+fieldAnnotation create --type CfgDocumentTestCase --field_name cfgdocumentRepository --valueType singx.app.server.repository.CfgDocumentRepository --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type CfgDocumentTestCase --field_name runtimeLogInfoHelper --dataType com.athena.framework.server.helper.RuntimeLogInfoHelper --Modifier private --valueType 
+
+fieldAnnotation create --type CfgDocumentTestCase --field_name runtimeLogInfoHelper --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type CfgDocumentTestCase --field_name entityValidator --dataType com.athena.framework.server.helper.EntityValidatorHelper<Object> --Modifier private --valueType 
+
+fieldAnnotation create --type CfgDocumentTestCase --field_name entityValidator --valueType com.athena.framework.server.helper.RuntimeLogInfoHelper<Object> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type CfgDocumentTestCase --field_name valueGenerator --dataType com.athena.framework.server.test.RandomValueGenerator --Modifier private --initializer "new com.athena.framework.server.test.RandomValueGenerator()"
+
+buzzorfield create --type CfgDocumentTestCase --field_name map --dataType java.util.HashMap<String,Object> --Modifier private --initializer "new HashMap<String,Object>()" --isStatic true
+
+buzzorfield create --type CfgDocumentTestCase --field_name methodCallStack --dataType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --Modifier private --valueType 
+
+fieldAnnotation create --type CfgDocumentTestCase --field_name methodCallStack --valueType com.spartan.healthmeter.entity.scheduler.ArtMethodCallStack --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzorfield create --type CfgDocumentTestCase --field_name session --dataType org.springframework.mock.web.MockHttpSession --Modifier protected --valueType javaType
+
+buzzorfield create --type CfgDocumentTestCase --field_name request --dataType org.springframework.mock.web.MockHttpServletRequest --Modifier protected --valueType javaType
+
+buzzorfield create --type CfgDocumentTestCase --field_name response --dataType org.springframework.mock.web.MockHttpServletResponse --Modifier protected --valueType javaType
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name startSession --modifier protected --return_type void --method_body "session = new MockHttpSession();"
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name endSession --modifier protected --return_type void --method_body "session.clearAttributes(); session.invalidate(); session = null;"
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name startRequest --modifier protected --return_type void --method_body "request = new MockHttpServletRequest(); request.setSession(session); org.springframework.web.context.request.RequestContextHolder.setRequestAttributes(new org.springframework.web.context.request.ServletRequestAttributes(request));"
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name endRequest --modifier protected --return_type void --method_body "((org.springframework.web.context.request.ServletRequestAttributes) org.springframework.web.context.request.RequestContextHolder.getRequestAttributes()).requestCompleted(); org.springframework.web.context.request.RequestContextHolder.resetRequestAttributes(); request = null;"
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name before --modifier public --return_type void --method_body "startSession(); startRequest(); setBeans();" --annotation org.junit.Before --key "" --value ""
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name after --modifier public --return_type void --method_body "endSession(); endRequest();" --annotation org.junit.After --key "" --value ""
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name setBeans --modifier private --return_type void --method_body "runtimeLogInfoHelper.createRuntimeLogUserInfo(1, "AAAAA", request.getRemoteHost());   org.junit.Assert.assertNotNull(runtimeLogInfoHelper);methodCallStack.setRequestId(java.util.UUID.randomUUID().toString().toUpperCase()); "
+ Import add --toClass CfgDocumentTestCase --importType singx.app.shared.singx.CfgDocument
+ Import add --toClass CfgDocumentTestCase --importType com.athena.framework.shared.entity.web.entityInterface.CommonEntityInterface.RECORD_TYPE
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name test1Save --modifier public --return_type void --method_body " try { Country country=new Country();country.setCapital("I4tWYAQuccx4bqxYEO1wvt2rYwXuf7mw"); country.setCapitalLatitude(6); country.setCapitalLongitude(9); country.setCountryCode1("w8J"); country.setCountryCode2("ZJH"); country.setCountryFlag("B19umhUQSZCg9qHoR573YVNTYYkK9yG0EK4py6vONe6MUFrgiR"); country.setCountryName("4KYpesFljqUW1Hinf4Jcm0tmKf4t5Mre3TXrtsFAGguxnS4zcy"); country.setCurrencyCode("uAr"); country.setCurrencyName("ffZNRbyRLHMHU8SRRZJtIbm7ZBUyz7nlyuNIi3yxYEVu8b22kA"); country.setCurrencySymbol("C8u9UBetaIbh0GbST1ZAbUyWf67Q4W19"); country.setIsoNumeric(3); Country CountryTest =countryRepository.save(country);map.put("CountryPrimaryKey", country._getPrimarykey());CustomerType customertype=new CustomerType();customertype.setCustomerTypeName("Byf44B163Wam43vwgk4CeB78ygrbzi8hHqZgjCgJveo477LyiF"); CustomerType CustomerTypeTest =customertypeRepository.save(customertype);map.put("CustomerTypePrimaryKey", customertype._getPrimarykey());CfgDocument cfgdocument=new CfgDocument();cfgdocument.setCountryId((java.lang.String)CountryTest._getPrimarykey()); /* ******Adding refrenced table data */cfgdocument.setCustomerType((java.lang.String)CustomerTypeTest._getPrimarykey()); /* ******Adding refrenced table data */cfgdocument.setDisplaySeq(2147483647); cfgdocument.setDocumentName("3h9rFUIF3w3DW3KiCH83yPZHAnSCEXc95ZLYdOy5Zmhoc32WDj"); cfgdocument.setIsExpiryDateReqd(true); cfgdocument.setIsIssueDateReqd(true); cfgdocument.setIsMandatory(true); cfgdocument.setIsReferenceNoReqd(true); cfgdocument.setIsRemarksReqd(true); cfgdocument.setMaxSize(2147483647); cfgdocument.setEntityAudit(1, "xyz", RECORD_TYPE.ADD);cfgdocument.setEntityValidator(entityValidator);cfgdocument.isValid();cfgdocumentRepository.save(cfgdocument); map.put("CfgDocumentPrimaryKey", cfgdocument._getPrimarykey());} catch (com.athena.framework.server.exception.biz.SpartanConstraintViolationException e) {org.junit.Assert.fail(e.getMessage()); }  catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+ Import add --toClass CfgDocumentTestCase --importType singx.app.shared.location.Country
+
+buzzorfield create --type CfgDocumentTestCase --field_name countryRepository --dataType singx.app.server.repository.CountryRepository<singx.app.shared.location.Country> --Modifier private --valueType 
+
+fieldAnnotation create --type CfgDocumentTestCase --field_name countryRepository --valueType singx.app.server.repository.CountryRepository<singx.app.shared.location.Country> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+ Import add --toClass CfgDocumentTestCase --importType singx.app.shared.singx.CustomerType
+
+buzzorfield create --type CfgDocumentTestCase --field_name customertypeRepository --dataType singx.app.server.repository.CustomerTypeRepository<singx.app.shared.singx.CustomerType> --Modifier private --valueType 
+
+fieldAnnotation create --type CfgDocumentTestCase --field_name customertypeRepository --valueType singx.app.server.repository.CustomerTypeRepository<singx.app.shared.singx.CustomerType> --annotation org.springframework.beans.factory.annotation.Autowired --key "" --value ""
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name test2Update --modifier public --return_type void --method_body " try { org.junit.Assert.assertNotNull(map.get("CfgDocumentPrimaryKey"));CfgDocument cfgdocument=cfgdocumentRepository.findById((java.lang.String)map.get("CfgDocumentPrimaryKey"));cfgdocument.setDisplaySeq(2147483647);cfgdocument.setDocumentName("ho95hDAoStgHYLI4p4NhaUTnaRmb5YOWPExhaUomf8mta5M4hY");cfgdocument.setMaxSize(2147483647);cfgdocument.setVersionId(1);cfgdocument.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);cfgdocumentRepository.update(cfgdocument);} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch (java.lang.Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name test3findBycountryId --modifier public --return_type void --method_body " try {java.util.List<CfgDocument> listofcountryId=cfgdocumentRepository.findByCountryId((java.lang.String)map.get("CountryPrimaryKey"));if(listofcountryId.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name test3findBycustomerType --modifier public --return_type void --method_body " try {java.util.List<CfgDocument> listofcustomerType=cfgdocumentRepository.findByCustomerType((java.lang.String)map.get("CustomerTypePrimaryKey"));if(listofcustomerType.size()==0){org.junit.Assert.fail("Query did not return any records.");  }} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name test3FindById --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("CfgDocumentPrimaryKey"));cfgdocumentRepository.findById((java.lang.String)map.get("CfgDocumentPrimaryKey"));} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+buzzormethod add --toClass CfgDocumentTestCase --method_name test4Delete --modifier public --return_type void --method_body " try {org.junit.Assert.assertNotNull(map.get("CfgDocumentPrimaryKey"));cfgdocumentRepository.delete((java.lang.String)map.get("CfgDocumentPrimaryKey"));/* Deleting refrenced data */customertypeRepository.delete((java.lang.String)map.get("CustomerTypePrimaryKey"));/* Deleting refrenced data */countryRepository.delete((java.lang.String)map.get("CountryPrimaryKey"));/* Deleting refrenced data */} catch (com.athena.framework.server.exception.repository.SpartanPersistenceException e) {org.junit.Assert.fail(e.getMessage());  } catch(Exception e) {e.printStackTrace(); } "  --annotation org.junit.Test --key "" --value ""
+
+
+
+
+
+quit

@@ -1,0 +1,11 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-19 13:02:30
+ development mode --enabled true 
+buzzorclass add --className ~.app.server.service.aspect.BackOffice.UserInfoAspect --annotation org.aspectj.lang.annotation.Aspect,org.springframework.stereotype.Component
+buzzorfield create --type ~.app.server.service.aspect.BackOffice.UserInfoAspect --field_name usercontactmapservice --dataType singx.app.server.businessservice.backoffice.singx.UserContactMapService --Modifier private --annotation org.springframework.beans.factory.annotation.Autowired
+buzzormethod add --toClass ~.app.server.service.aspect.BackOffice.UserInfoAspect --method_name afterAuthenticateServiceauthenticate --return_type void --modifier public --annotation org.aspectj.lang.annotation.After --key "value.org.aspectj.lang.annotation.After" --value "afterauthenticate().org.aspectj.lang.annotation.After" --throws java.lang.Throwable --parameter_value org.aspectj.lang.JoinPoint --parameter_name joinPoint --method_body usercontactmapservice.getConatctInfo();
+buzzormethod add --toClass ~.app.server.service.aspect.BackOffice.UserInfoAspect --method_name afterauthenticate --return_type void --modifier public --annotation org.aspectj.lang.annotation.Pointcut --key "value.org.aspectj.lang.annotation.Pointcut" --value "execution(* com.spartan.shield.server.service.AuthenticateService.authenticate(..))"
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-19 13:02:50
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-19 13:02:50
+// script --file singx.cf
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-19 13:02:50

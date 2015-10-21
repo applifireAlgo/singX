@@ -1,0 +1,12 @@
+
+
+
+
+ development mode --enabled true 
+
+
+ruleServiceClass create --ruleServiceClass ~.app.server.service.backoffice.singx.service.IndividualProfileStatusServiceWS --ruleBzClass singx.app.server.businessservice.backoffice.singx.IndividualProfileStatusService --ruleMethod getStatus --returnType java.util.List --overrideMethod getStatus
+ruleEngine create --rulebzClass ~.app.server.businessservice.backoffice.singx.IndividualProfileStatusService --ruleFieldName sessionService,individualCustomerStatusServiceBzServiceImpl --ruleFieldType singx.app.server.service.sessionmgt.SessionDataMgtService,singx.app.server.businessservice.backoffice.IndividualCustomerStatusServiceBzServiceImpl --entityType false,false
+buzzormethod add --toClass ~.app.server.businessservice.backoffice.singx.IndividualProfileStatusService --method_name getStatus --return_type java.util.List --modifier public --method_body "java.util.List geticprofilestatus_23;try{java.lang.String singxcontactId = (java.lang.String)sessionService.getSessionData("singxcontactId");if(singxcontactId == null){throw new com.athena.framework.server.exception.biz.SpartanDataNotFoundException("Data not found in session");}if(singxcontactId == null){throw new com.athena.framework.server.exception.biz.SpartanDataNotFoundException("invalid parameter");}java.util.List<singx.app.shared.backoffice.GetICProfileStatus> geticprofilestatus_22 = individualCustomerStatusServiceBzServiceImpl.executeQueryGetICProfileStatus(singxcontactId);geticprofilestatus_23 = individualCustomerStatusServiceBzServiceImpl.executeQueryGetICProfileStatus((java.lang.Integer)ruleEngineInterface.getResult("geticprofilestatus_22"));return geticprofilestatus_23;} catch (com.athena.framework.server.exception.biz.RuleDataException | com.athena.framework.server.exception.biz.RuleWorkingMemoryException e ) {throw new com.athena.framework.server.exception.biz.SpartanBusinessValidationFailedException("3005");}" --throws com.athena.framework.server.exception.biz.SpartanIncorrectDataException,java.lang.Exception,com.athena.framework.server.exception.biz.SpartanBusinessValidationFailedException,com.athena.framework.server.exception.repository.SpartanPersistenceException,com.athena.framework.server.exception.biz.SpartanDataNotFoundException
+
+quit

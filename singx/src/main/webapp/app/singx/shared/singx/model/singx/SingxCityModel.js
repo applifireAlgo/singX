@@ -1,0 +1,31 @@
+Ext.define('Buzzor.singx.shared.singx.model.singx.SingxCityModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "cityId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "cityName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "stateid",
+          "reference": "State",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

@@ -1,0 +1,20 @@
+
+
+
+
+ development mode --enabled true 
+
+
+
+buzzorclass add --className ~.app.shared.backoffice.ACL.CustomerACL 
+methodoperation type setParameterizedConstructor --class ~.app.shared.backoffice.ACL.CustomerACL --fields --constructorBody "this.customercontadto = _customercontadto;this.doMapping();" --parameterName _customercontadto --parameterType singx.app.shared.backoffice.singx.CustomerContaDTO
+
+buzzorfield create --type ~.app.shared.backoffice.ACL.CustomerACL --field_name customercontadto --dataType singx.app.shared.backoffice.singx.CustomerContaDTO --Modifier private --valueType String --isStatic false
+
+buzzorfield create --type ~.app.shared.backoffice.ACL.CustomerACL --field_name singxcustomer --dataType singx.app.shared.singx.SingXCustomer --Modifier private --valueType String --isStatic false
+
+buzzormethod add --toClass ~.app.shared.backoffice.ACL.CustomerACL --method_name custAcl --modifier public --return_type singx.app.shared.singx.SingXCustomer --method_body "return singxcustomer;" --key "" --value ""
+
+buzzormethod add --toClass ~.app.shared.backoffice.ACL.CustomerACL --method_name doMapping --modifier public --return_type void --method_body "singxcustomer=new  SingXCustomer();singxcustomer.setCountryId(customercontadto.getCountryId());singxcustomer.setCustomerTypeId(customercontadto.getCustomerTypeId());singxcustomer.setEmailId(customercontadto.getEmailId());" --key "" --value ""
+
+quit

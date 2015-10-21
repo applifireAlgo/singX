@@ -1,0 +1,47 @@
+Ext.define('Buzzor.singx.shared.singx.model.singx.CfgCountryAddressModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "addressId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "displayName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "isMandatory",
+          "type": "boolean",
+          "defaultValue": ""
+     }, {
+          "name": "maxLength",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "inputtypeid",
+          "reference": "InputDataType",
+          "defaultValue": ""
+     }, {
+          "name": "displaySeq",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "countryid",
+          "reference": "Country",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

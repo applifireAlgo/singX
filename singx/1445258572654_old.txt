@@ -1,0 +1,12 @@
+
+
+
+
+ development mode --enabled true 
+
+
+ruleServiceClass create --ruleServiceClass ~.app.server.service.backoffice.singx.service.IndividualProfileStatusServiceWS --ruleBzClass singx.app.server.businessservice.backoffice.singx.IndividualProfileStatusService --ruleMethod individualProfileStatus --returnType java.util.List<singx.app.shared.backoffice.GetICProfileStatus> --overrideMethod individualProfileStatus
+ruleEngine create --rulebzClass ~.app.server.businessservice.backoffice.singx.IndividualProfileStatusService --ruleFieldName sessionService,individualCustomerStatusServiceBzServiceImpl --ruleFieldType singx.app.server.service.sessionmgt.SessionDataMgtService,singx.app.server.businessservice.backoffice.IndividualCustomerStatusServiceBzServiceImpl --entityType false,false
+buzzormethod add --toClass ~.app.server.businessservice.backoffice.singx.IndividualProfileStatusService --method_name individualProfileStatus --return_type java.util.List<singx.app.shared.backoffice.GetICProfileStatus> --modifier public --method_body "java.util.List<singx.app.shared.backoffice.GetICProfileStatus> geticprofilestatus_22;try{java.lang.String singxcontactId = (java.lang.String)sessionService.getSessionData("singxcontactId");if(singxcontactId == null){throw new com.athena.framework.server.exception.biz.SpartanDataNotFoundException("Data not found in session");}geticprofilestatus_22 = individualCustomerStatusServiceBzServiceImpl.executeQueryGetICProfileStatus(singxcontactId);return geticprofilestatus_22;} catch (java.lang.Exception e) {throw new com.athena.framework.server.exception.biz.SpartanBusinessValidationFailedException("3005");}" --throws com.athena.framework.server.exception.biz.SpartanIncorrectDataException,java.lang.Exception,com.athena.framework.server.exception.biz.SpartanBusinessValidationFailedException,com.athena.framework.server.exception.repository.SpartanPersistenceException,com.athena.framework.server.exception.biz.SpartanDataNotFoundException
+
+quit

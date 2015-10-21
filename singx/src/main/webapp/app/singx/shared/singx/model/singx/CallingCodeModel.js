@@ -1,0 +1,31 @@
+Ext.define('Buzzor.singx.shared.singx.model.singx.CallingCodeModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "countryid",
+          "reference": "Country",
+          "defaultValue": ""
+     }, {
+          "name": "callingCode",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "mapId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

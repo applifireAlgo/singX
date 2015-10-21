@@ -1,0 +1,47 @@
+Ext.define('Buzzor.singx.shared.singx.model.singx.IndividualRegDetailModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "customerid",
+          "reference": "SingXCustomer",
+          "defaultValue": ""
+     }, {
+          "name": "residencetypeid",
+          "reference": "ResidenceType",
+          "defaultValue": ""
+     }, {
+          "name": "nationalityId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "documentid",
+          "reference": "CfgDocIndividual",
+          "defaultValue": ""
+     }, {
+          "name": "idProofValue",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "expiryDate",
+          "type": "date",
+          "defaultValue": ""
+     }, {
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "mapId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

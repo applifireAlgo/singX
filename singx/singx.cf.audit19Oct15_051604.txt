@@ -1,0 +1,59 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-19 05:15:43
+ development mode --enabled true 
+buzzproperties codeStatus --PropertyFileName status --key CustomerContaDTO --value 1
+buzzorclass add --className ~.app.shared.backoffice.singx.CustomerContaDTO
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name customerId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name countryId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name customerTypeId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name emailId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name residenceTypeId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name nationalityId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name documentId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name idProofValue --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name expiryDate --dataType java.sql.Date --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name mapId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name companyTypeId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name companyCategoryId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name companyName --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name registrationNumber --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name headOffice --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name contactId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name phoneNumber --dataType java.lang.Integer --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name prefixId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name firstName --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name middleName --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name lastName --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name genderId --dataType java.lang.String --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name dateOfBirth --dataType java.sql.Date --Modifier private
+buzzorfield create --type ~.app.shared.backoffice.singx.CustomerContaDTO --field_name phoneCountryCode --dataType java.lang.String --Modifier private
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName customerId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName countryId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName customerTypeId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName emailId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName residenceTypeId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName nationalityId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName documentId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName idProofValue --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName expiryDate --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName mapId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName companyTypeId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName companyCategoryId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName companyName --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName registrationNumber --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName headOffice --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName contactId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName phoneNumber --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName prefixId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName firstName --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName middleName --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName lastName --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName genderId --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName dateOfBirth --getterMethod true --setterMethod true
+methodoperation type getSetMethod --class ~.app.shared.backoffice.singx.CustomerContaDTO --variableName phoneCountryCode --getterMethod true --setterMethod true
+buzzorclass createAnnotation --toClass ~.app.shared.backoffice.singx.CustomerContaDTO --annotation  javax.xml.bind.annotation.XmlRootElement
+buzzproperties codeStatus --PropertyFileName status --key CustomerContaDTO --value 0
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-19 05:16:04
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2015-10-19 05:16:04
+// script --file singx.cf
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2015-10-19 05:16:04
